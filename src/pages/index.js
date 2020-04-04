@@ -3,8 +3,11 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import ArticlePreview from '../components/article-preview'
+import "../utils/normalize.css"
+import "../utils/css/screen.css"
+import '../components/base.css' // todo old css, keeps home grid properly
 
 class RootIndex extends React.Component {
   render() {

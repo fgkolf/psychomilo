@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import styles from './article-preview.module.css'
 
-export default ({ article }) => (
+export default ({ article }) => ( // todo remove all post card post etc related classes
   <div className={styles.preview}>
     <Img alt="" fluid={article.heroImage.fluid} />
     <h3 className={styles.previewTitle}>

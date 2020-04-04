@@ -14,7 +14,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
+    // todo remove all index not used related classes
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>

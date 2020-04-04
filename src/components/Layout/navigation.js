@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default ({ toggleNav, setToggleNav }) => (
+const Navigation = ({ toggleNav, setToggleNav, pathname }) => (
   <React.Fragment>
     <a
       className="nav-burger"
-      href={`#`}
+      href='#'
       onClick={() => setToggleNav(!toggleNav)}
     >
       <div
-        className="hamburger hamburger--collapse" // todo this is broken, not shown in mobile view
+        className="hamburger hamburger--collapse"
         aria-label="Menu"
         role="button"
         aria-controls="navigation"
@@ -20,14 +20,16 @@ export default ({ toggleNav, setToggleNav }) => (
       </div>
     </a>
     <nav id="swup" className="site-head-left">
-      <ul className="nav" role="menu">
-        <li className="nav-home nav-current" role="menuitem">
+      <ul className="nav">
+        <li className={`nav ${pathname==='/' ? 'nav-current' : ''}`}>
           <Link to="/">Home</Link>
         </li>
-        <li className="nav-about" role="menuitem">
+        <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
           <Link to="/blog/">Blog</Link>
         </li>
       </ul>
     </nav>
   </React.Fragment>
 )
+
+export default Navigation

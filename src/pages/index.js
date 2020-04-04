@@ -3,35 +3,33 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout/layout'
 import ArticlePreview from '../components/article-preview'
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
 import '../components/base.css' // todo old css, keeps home grid properly
+import '../utils/css/screen.css'
+import '../utils/normalize.css'
 
 class RootIndex extends React.Component {
-  render() {
+  render () {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
     // todo remove all index not used related classes
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+      <Layout location={this.props.location} siteTitle={siteTitle}>
+        <Helmet title={siteTitle}/>
+        <Hero data={author.node}/>
+        <div className="wrapper">
+          <h2 className="section-headline">Recent articles</h2>
+          <ul className="article-list">
+            {posts.map(({ node }) => {
+              return (
+                <li key={node.slug}>
+                  <ArticlePreview article={node}/>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </Layout>
     )
@@ -42,6 +40,11 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

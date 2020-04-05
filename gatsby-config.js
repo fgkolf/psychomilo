@@ -22,7 +22,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: `psychomilo`
+    title: `psychomilo`,
+    url: 'https://psychomilo.netlify.com' // for share in share component
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

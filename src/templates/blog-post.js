@@ -5,11 +5,14 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout/layout'
 import heroStyles from '../components/hero.module.css'
+import Share from '../components/share'
 
 class BlogPostTemplate extends React.Component {
   render () {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const url = get(this, 'props.data.site.siteMetadata.url')
+    const socialUrl = `${url}/blog/${post.slug}`
 
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
@@ -31,6 +34,7 @@ class BlogPostTemplate extends React.Component {
               __html: post.body.childMarkdownRemark.html,
             }}
           />
+          <Share url={socialUrl} title={post.title} />
         </div>
       </Layout>
     )
@@ -44,6 +48,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        url
       }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
           ...GatsbyContentfulFluid_tracedSVG
         }
       }
+      slug
       body {
         childMarkdownRemark {
           html

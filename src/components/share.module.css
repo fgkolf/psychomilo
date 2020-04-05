@@ -1,0 +1,44 @@
+.share {
+  margin: 0.5rem 0.25rem !important;
+  border-radius: 20px !important;
+  padding: 3px !important;
+  border-style: solid !important;
+  border-width: thin !important;
+}
+
+.facebook {
+  color: #3b5998 !important;
+  border-color: #3b5998 !important;
+}
+
+.facebook:hover {
+  background-color:#3b5998 !important;
+  border-color:#3b5998 !important;
+  color: #fff !important;
+}
+
+.twitter {
+  color: #1da1f2 !important;
+  border-color: #1da1f2 !important;
+}
+
+.twitter:hover {
+  background-color:#1da1f2 !important;
+  border-color:#1da1f2 !important;
+  color: #fff !important;
+}
+
+.linkedin {
+  color: #0077b5 !important;
+  border-color: #0077b5;
+}
+
+.linkedin:hover {
+  background-color:#0077b5 !important;
+  border-color:#0077b5 !important;
+  color: #fff !important;
+}
+
+.text {
+  padding: 5px;
+}

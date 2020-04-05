@@ -52,13 +52,15 @@ body {
 
 .site-wrapper {
     padding: 3vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
     min-height: 100vh;
 }
 @media (max-width: 850px) {
     .site-wrapper {
         padding: 6vw;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

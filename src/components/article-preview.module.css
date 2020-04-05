@@ -2,6 +2,22 @@
   font-size: 1.5em;
 }
 
+.articleNode {
+  transition: all .2s ease-in-out;
+}
+
+.articleNode:hover {
+  transform: scale(1.1);
+}
+
+.articleLink {
+  color: #111111;
+}
+
+.articleLink:hover {
+  text-decoration: none;
+}
+
 .tag {
   color: #A0A0A0;
   text-decoration: none;

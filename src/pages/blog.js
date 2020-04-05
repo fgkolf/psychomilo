@@ -17,13 +17,7 @@ class BlogIndex extends React.Component {
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node}/>
-                </li>
-              )
-            })}
+            {posts.map(({ node }) => (<ArticlePreview key={node.slug} article={node}/>))}
           </ul>
         </div>
       </Layout>

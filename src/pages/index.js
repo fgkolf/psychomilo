@@ -18,17 +18,16 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <Helmet title={siteTitle}/>
+        <header className="page-head">
+          <h2 className="page-head-title">
+            PAGE HEAD, This will be the intro text to the site
+          </h2>
+        </header>
         <Hero data={author.node}/>
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node}/>
-                </li>
-              )
-            })}
+            {posts.map(({ node }) => (<ArticlePreview key={node.slug} article={node}/>))}
           </ul>
         </div>
       </Layout>

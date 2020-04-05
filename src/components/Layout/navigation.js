@@ -22,7 +22,7 @@ const Navigation = ({ toggleNav, setToggleNav, pathname }) => (
     <nav id="swup" className="site-head-left">
       <ul className="nav">
         <li className={`nav ${pathname==='/' ? 'nav-current' : ''}`}>
-          <Link to="/">Home</Link>
+          <Link to="/">Αρχική</Link>
         </li>
         <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
           <Link to="/blog/">Blog</Link>

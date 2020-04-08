@@ -23,7 +23,7 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
@@ -199,11 +199,13 @@ body {
     display: block;
     padding: 10px;
     color: var(--color-base);
-    font-size: 2.1rem;
     line-height: 1em;
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 1px;
+
+    font-family: "Amatic SC", sans-serif;
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 .site-head-logo:hover {

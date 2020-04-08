@@ -1,6 +1,2 @@
-// custom font
-import "typeface-montserrat"
-import "typeface-merriweather"
-import "typeface-nunito"
-import "typeface-alegreya"
-// todo evaluate this
+import "typeface-ubuntu"
+import "typeface-amatic-sc"

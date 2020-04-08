@@ -24,10 +24,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "react-share": "^4.1.0",
-    "typeface-alegreya": "^0.0.69",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54",
-    "typeface-nunito": "^0.0.72"
+    "typeface-ubuntu": "^0.0.65",
+    "typeface-amatic-sc": "^0.0.72"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",

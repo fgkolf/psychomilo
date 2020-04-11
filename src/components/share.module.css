@@ -1,22 +1,22 @@
-.share-container {
+.shareContainer {
   display: table;   /* Allow the centering to work */
   margin: 4em auto;
 }
 
-.share-header {
+.shareHeader {
   text-align: center;
   font-size: 1.7rem;
 }
 
-.share-icons {
+.shareIcons {
   list-style: none;
 }
 
-.share-icons li {
+.shareIcons li {
   display: inline;
 }
 
-.share-icon {
+.shareIcon {
   width: 40px !important;
   height: 40px !important;
   margin: 0.5rem 0.6rem !important; /* todo reduce icons size a bit */
@@ -29,7 +29,7 @@
   transition: background 0.3s;
 }
 
-.share-icon:hover {
+.shareIcon:hover {
   background-color: rgba(238, 238, 238, 0.70) !important;
 }
 

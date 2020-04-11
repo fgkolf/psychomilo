@@ -6,6 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout/layout'
 import heroStyles from '../components/hero.module.css'
 import Share from '../components/share'
+import BlogPostNavigation from '../components/blog-post-navigation'
 
 const BlogPostTemplate = ({ location, data }) => {
   const post = get(data, 'contentfulBlogPost')
@@ -34,6 +35,7 @@ const BlogPostTemplate = ({ location, data }) => {
           <Share url={socialUrl} title={post.title}/>
         </div>
       </article>
+      <BlogPostNavigation previous={post.previous} next={post.next} />
     </Layout>
   )
 }
@@ -51,6 +53,14 @@ export const pageQuery = graphql`
         }
       }
       slug
+      next {
+        title
+        slug
+      }
+      previous {
+        title
+        slug
+      }
       body {
         childMarkdownRemark {
           html

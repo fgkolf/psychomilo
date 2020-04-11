@@ -3,8 +3,10 @@ import { Link } from 'gatsby'
 import Navigation from './navigation'
 import Social from './social'
 import BackToTop from './back-to-top'
+import useSiteTitle from '../../utils/useSiteTitle'
 
-const Layout = ({ children, siteTitle, location }) => {
+const Layout = ({ children, location }) => {
+  const siteTitle = useSiteTitle();
   const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>

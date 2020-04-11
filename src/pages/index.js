@@ -5,18 +5,19 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/Layout/layout'
 import ArticlePreview from '../components/article-preview'
+import useSiteTitle from '../utils/useSiteTitle'
+
 import '../components/base.css' // todo old css, keeps home grid properly
 import '../utils/css/screen.css'
 import '../utils/normalize.css'
 
-class RootIndex extends React.Component {
-  render () {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
+const RootIndex = ({ location, data }) => {
+    const siteTitle = useSiteTitle();
+    const posts = get(data, 'allContentfulBlogPost.edges')
+    const [author] = get(data, 'allContentfulPerson.edges')
     // todo remove all index not used related classes
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle}>
+      <Layout location={location}>
         <Helmet title={siteTitle}/>
         <header className="page-head">
           <h2 className="page-head-title">
@@ -32,18 +33,12 @@ class RootIndex extends React.Component {
         </div>
       </Layout>
     )
-  }
 }
 
 export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

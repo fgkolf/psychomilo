@@ -5,13 +5,13 @@ import Helmet from 'react-helmet'
 import styles from './blog.module.css'
 import Layout from '../components/Layout/layout'
 import ArticlePreview from '../components/article-preview'
+import useSiteTitle from '../utils/useSiteTitle'
 
-class BlogIndex extends React.Component {
-  render () {
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title') // todo use static query instead
+const BlogIndex = ({ location, data }) => {
+    const posts = get(data, 'allContentfulBlogPost.edges')
+    const siteTitle = useSiteTitle();
     return (
-      <Layout location={this.props.location} siteTitle={siteTitle}>
+      <Layout location={location}>
         <Helmet title={siteTitle}/>
         <div className={styles.hero}>Blog</div>
         <div className="wrapper">
@@ -22,18 +22,12 @@ class BlogIndex extends React.Component {
         </div>
       </Layout>
     )
-  }
 }
 
 export default BlogIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

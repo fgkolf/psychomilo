@@ -199,7 +199,6 @@ body {
     display: block;
     padding: 10px;
     color: var(--color-base);
-    line-height: 1em;
     letter-spacing: 1px;
 
     font-family: "Amatic SC", sans-serif;

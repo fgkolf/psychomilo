@@ -1,44 +1,48 @@
-.share {
-  margin: 0.5rem 0.25rem !important;
-  border-radius: 20px !important;
+.share-container {
+  display: table;   /* Allow the centering to work */
+  margin: 4em auto;
+}
+
+.share-header {
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.share-icons {
+  list-style: none;
+}
+
+.share-icons li {
+  display: inline;
+}
+
+.share-icon {
+  width: 40px !important;
+  height: 40px !important;
+  margin: 0.5rem 0.6rem !important; /* todo reduce icons size a bit */
+  border-radius: 50% !important;
+  outline: none !important;
   padding: 3px !important;
   border-style: solid !important;
   border-width: thin !important;
+  border-color: rgba(0, 0, 0, 0.10) !important;
+  transition: background 0.3s;
+}
+
+.share-icon:hover {
+  background-color: rgba(238, 238, 238, 0.70) !important;
 }
 
 .facebook {
   color: #3b5998 !important;
-  border-color: #3b5998 !important;
-}
-
-.facebook:hover {
-  background-color:#3b5998 !important;
-  border-color:#3b5998 !important;
-  color: #fff !important;
 }
 
 .twitter {
   color: #1da1f2 !important;
-  border-color: #1da1f2 !important;
-}
-
-.twitter:hover {
-  background-color:#1da1f2 !important;
-  border-color:#1da1f2 !important;
-  color: #fff !important;
 }
 
 .linkedin {
   color: #0077b5 !important;
-  border-color: #0077b5;
 }
 
-.linkedin:hover {
-  background-color:#0077b5 !important;
-  border-color:#0077b5 !important;
-  color: #fff !important;
-}
-
-.text {
-  padding: 5px;
-}
+/* TODO remove importants!! */

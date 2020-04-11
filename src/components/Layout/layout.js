@@ -1,7 +1,8 @@
-import React from "react"
+import React from 'react'
 import { Link } from 'gatsby'
-import Navigation from './navigation';
+import Navigation from './navigation'
 import Social from './social'
+import BackToTop from './back-to-top'
 
 const Layout = ({ children, siteTitle, location }) => {
   const [toggleNav, setToggleNav] = React.useState(false)
@@ -18,11 +19,10 @@ const Layout = ({ children, siteTitle, location }) => {
           <Social />
         </div>
       </header>
-      <main id="site-main" className="site-main">
-        <div id="swup" className="transition-fade">
-          {children}
-        </div>
-      </main>
+      <div className="transition-fade">
+        {children}
+      </div>
+      <BackToTop/>
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{siteTitle}</Link>
       </footer>

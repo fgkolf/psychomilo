@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 
 const Navigation = ({ toggleNav, setToggleNav, pathname }) => (
   <React.Fragment>
-    <a
+    <button
       className="nav-burger"
-      href='#'
+      type="button"
       onClick={() => setToggleNav(!toggleNav)}
     >
       <div
@@ -18,14 +18,14 @@ const Navigation = ({ toggleNav, setToggleNav, pathname }) => (
           <div className="hamburger-inner"/>
         </div>
       </div>
-    </a>
+    </button>
     <nav className="site-head-left">
       <ul className="nav">
         <li className={`nav ${pathname==='/' ? 'nav-current' : ''}`}>
           <Link to="/">Αρχική</Link>
         </li>
         <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
-          <Link to="/blog/">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </li>
       </ul>
     </nav>

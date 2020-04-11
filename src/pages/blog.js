@@ -9,7 +9,7 @@ import ArticlePreview from '../components/article-preview'
 class BlogIndex extends React.Component {
   render () {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title') // todo use static query instead
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <Helmet title={siteTitle}/>

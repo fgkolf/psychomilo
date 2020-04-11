@@ -272,6 +272,8 @@ body {
     left: 0;
     z-index: 9999;
     padding: 12px 12px 12px 0;
+    background: none;
+    outline: none;
 }
 
 @media (max-width: 850px) {
@@ -372,6 +374,7 @@ body {
         transform: scale(1) translateY(0px);
     }
     .site-head-open .nav-current a {
+        font-weight: bold;
         border-bottom: var(--color-base) 2px solid;
     }
     .site-head-open .site-head-right a {

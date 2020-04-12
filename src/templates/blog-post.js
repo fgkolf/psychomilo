@@ -7,10 +7,11 @@ import Layout from '../components/Layout/layout'
 import heroStyles from '../components/hero.module.css'
 import Share from '../components/share'
 import BlogPostNavigation from '../components/blog-post-navigation'
+import useSiteUrl from '../utils/useSiteUrl'
 
 const BlogPostTemplate = ({ location, data }) => {
   const post = get(data, 'contentfulBlogPost')
-  const url = get(data, 'site.siteMetadata.url')
+  const url = useSiteUrl()
   const socialUrl = `${url}/blog/${post.slug}`
 
   return (

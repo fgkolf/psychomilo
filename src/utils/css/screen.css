@@ -10,7 +10,6 @@ production stylesheet in assets/built/screen.css using gulp dev
 /* ---------------------------------------------------------- */
 @import "vars.css";
 @import "components/global.css";
-@import "components/ghost.css";
 @import "components/lists.css";
 @import "components/grid.css";
 @import "components/tables.css";
@@ -73,31 +72,6 @@ body {
     text-align: center;
 }
 
-.error-head {
-    height: 75vh;
-}
-
-.error-head h1 {
-    margin: 0;
-    font-size: 7rem;
-    line-height: 1.1em;
-    font-weight: var(--font-heavy);
-    letter-spacing: 10px;
-}
-
-.error-head p {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: color(var(--color-base) l(+50%));
-}
-
-.error-link {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    text-decoration: underline;
-}
-
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
@@ -122,7 +96,7 @@ body {
 }
 
 .site-foot {
-    margin: 3vw 0 1vw;
+    margin: 5vw 0 1vw;
     text-align: center;
     color: color(var(--color-border) l(-20%));
     font-size: 1.4rem;
@@ -231,37 +205,6 @@ body {
     display: flex;
     align-items: center;
 }
-
-.subscribe-button {
-    display: block;
-    padding: 4px 10px;
-    border: var(--color-base) 1px solid;
-    color: var(--color-base);
-    font-size: 1.2rem;
-    line-height: 1em;
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-.subscribe-button:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
-.rss-button {
-    opacity: 0.4;
-}
-
-.rss-button:hover {
-    opacity: 1;
-}
-
-.rss-button svg {
-    margin-bottom: 1px;
-    height: 2.1rem;
-    fill: var(--color-base);
-}
-
 
 /* Mobile Nav Menu
 /* ---------------------------------------------------------- */
@@ -661,26 +604,6 @@ body {
     transform: rotate(45deg);
 }
 
-.footnotes-sep {
-    margin-bottom: 30px;
-}
-
-.footnotes {
-    font-size: 1.5rem;
-}
-
-.footnotes p {
-    margin: 0;
-}
-
-.footnote-backref {
-    color: var(--color-primary) !important;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none !important;
-    box-shadow: none !important;
-}
-
 /* Author Archive
 /* ---------------------------------------------------------- */
 
@@ -690,30 +613,6 @@ body {
     align-items: center;
     margin-bottom: 10px;
     color: color(var(--color-border) l(-20%));
-}
-
-.author-links {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.author-links a {
-    display: block;
-    margin: 0;
-    padding: 0 12px;
-    color: var(--color-base);
-    opacity: 0.4;
-}
-
-.author-links a:hover {
-    text-decoration: none;
-    opacity: 1;
-}
-
-.author-links .divider {
-    display: inline-block;
-    margin: 0 3px;
 }
 
 /* Page Template

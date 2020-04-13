@@ -16,7 +16,7 @@
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "lato", sans-serif;
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;

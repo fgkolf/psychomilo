@@ -2,11 +2,12 @@
   font-size: 1.5em;
 }
 
-.articleNode {
-  transition: all .2s ease-in-out;
+.articleNode img {
+  transition: all 0.5s ease-in-out!important;
+  transform: scale(1);
 }
 
-.articleNode:hover {
+.articleNode:hover img {
   transform: scale(1.1);
 }
 

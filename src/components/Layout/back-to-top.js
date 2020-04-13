@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 import './back-to-top.css';
 
@@ -55,7 +55,7 @@ const BackToTop = () => {
   }, [])
   return (
     <button ref={ref} className="back-to-top-btn" type="button" onClick={smoothScrollBackToTop}>
-      <FontAwesomeIcon icon={faAngleDoubleUp}/>
+      <FontAwesomeIcon icon={faAngleUp}/>
     </button>
   )
 }

@@ -25,7 +25,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.0",
     "react-share": "^4.1.0",
-    "typeface-ubuntu": "^0.0.65",
+    "typeface-lato": "^0.0.75",
     "typeface-amatic-sc": "^0.0.72"
   },
   "devDependencies": {
@@ -52,5 +52,7 @@
     "serve": "gatsby serve",
     "setup": "npm install --no-save contentful-import yargs-parser axios chalk && node ./setup.js"
   },
-  "browserslist": ["defaults"]
+  "browserslist": [
+    "defaults"
+  ]
 }

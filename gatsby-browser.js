@@ -1,2 +1,2 @@
-import "typeface-ubuntu"
+import "typeface-lato"
 import "typeface-amatic-sc"

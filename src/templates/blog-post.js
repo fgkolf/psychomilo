@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ location, data }) => {
           fluid={post.heroImage.fluid}
         />
       </div>
-      <article className="post-content page-template no-image">
+      <article className="post-content page-template no-image wrapper">
         <div className="post-content-body">
           <h1 className="section-headline">{post.title}</h1>
           <p style={{ display: 'block' }}>{post.publishDate}</p>

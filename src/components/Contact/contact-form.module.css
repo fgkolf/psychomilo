@@ -1,0 +1,26 @@
+.buttonWrap {
+    text-align: center;
+}
+
+.submitBtn {
+    background: none;
+    border: solid 1px #ddd;
+    border-radius: 0.5rem;
+    padding: 0 0.6em;
+    height: 4rem;
+    outline: none;
+    transition: all 0.5s ease-out;
+}
+
+.submitBtn:hover {
+    background-color: #ddd;
+}
+
+.error {
+    border-color: red !important;
+}
+
+.errorMsg {
+    font-size: 1.2rem;
+    color: red;
+}

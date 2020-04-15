@@ -71,4 +71,3 @@ public
 
 # netlify related
 netlify.toml
-netlifyctl

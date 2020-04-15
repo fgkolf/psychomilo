@@ -5,8 +5,8 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout/layout'
 import heroStyles from '../components/hero.module.css'
-import Share from '../components/share'
-import BlogPostNavigation from '../components/blog-post-navigation'
+import Share from '../components/BlogPost/share'
+import BlogPostNavigation from '../components/BlogPost/blog-post-navigation'
 import useSiteUrl from '../utils/useSiteUrl'
 
 const BlogPostTemplate = ({ location, data }) => {

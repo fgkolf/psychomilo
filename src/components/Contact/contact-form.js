@@ -14,7 +14,7 @@ const validate = (values) => {
   let errors = {}
 
   if (!values.name.trim()) {
-    errors.name = 'Εισάγετε ένα όνομα'
+    errors.name = 'Εισάγετε το όνομα σας'
   }
 
   if (!values.email.trim()) {

@@ -3,6 +3,11 @@
   justify-content: space-around;
   font-size: 2rem;
   font-style: italic;
+  transition: opacity 0.2s ease-in;
+}
+
+.blogNavigationItem:hover {
+  opacity: 0.8;
 }
 
 .blogNavigationItem a {

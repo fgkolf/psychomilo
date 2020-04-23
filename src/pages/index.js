@@ -45,7 +45,6 @@ export const pageQuery = graphql`
           title
           slug
           publishDate(formatString: "MMMM Do, YYYY")
-          tags
           heroImage {
             fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid

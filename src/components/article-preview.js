@@ -20,9 +20,9 @@ export default ({ article }) => ( // todo remove all post card post etc related 
       </h3>
     </Link>
     <small>{article.publishDate}</small>
-    <p
+    <div
       dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
+        __html: article.description.childMarkdownRemark.html
       }}
     />
   </li>

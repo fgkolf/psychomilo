@@ -23,7 +23,7 @@ const NavBurger = ({ toggle }) => (
 const Navigation = ({ toggle, pathname, children }) => (
   <React.Fragment>
     <NavBurger toggle={toggle} />
-    <nav className="site-head-left">
+    <nav className="site-head-fragment">
       <ul className="nav">
         <li className={`nav ${pathname==='/' ? 'nav-current' : ''}`}>
           <Link to="/">Αρχική</Link>
@@ -34,7 +34,7 @@ const Navigation = ({ toggle, pathname, children }) => (
       </ul>
     </nav>
     {children}
-    <nav className="site-head-left">
+    <nav className="site-head-fragment">
       <ul className="nav">
         <li className={`nav ${pathname.startsWith('/about') ? 'nav-current' : ''}`}>
           <Link to="/about">About</Link>

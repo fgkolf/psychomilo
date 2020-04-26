@@ -117,7 +117,7 @@ body {
     align-items: center;
 }
 
-.site-head-left {
+.site-head-fragment {
     position: relative;
     z-index: 100;
     display: flex;
@@ -138,7 +138,7 @@ body {
     padding: 0;
 }
 
-.site-head-left a {
+.site-head-fragment a {
     display: block;
     margin: 0;
     padding: 10px 12px;
@@ -213,14 +213,14 @@ body {
         transition: all 0.4s ease-out;
         overflow: hidden;
     }
-    .site-head-left {
+    .site-head-fragment {
         position: relative;
         z-index: -1;
         height: auto;
         transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
         transition-delay: 1s;
     }
-    .site-head-left a {
+    .site-head-fragment a {
         margin: 8px 0;
         padding: 1px 0;
         font-size: 2.6rem;
@@ -238,7 +238,7 @@ body {
         align-items: flex-start;
         margin: 0;
     }
-    .site-head-left {
+    .site-head-fragment {
         order: 2;
         margin: 0;
         width: 100%;
@@ -264,13 +264,13 @@ body {
         transition: height 0.2s ease-in;
     }
 
-    .site-head-open .site-head-left {
+    .site-head-open .site-head-fragment {
         z-index: 9999;
         height: auto;
         transition: height 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
     }
 
-    .site-head-open .site-head-left a {
+    .site-head-open .site-head-fragment a {
         opacity: 1;
         transition: transform 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99),
         opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);

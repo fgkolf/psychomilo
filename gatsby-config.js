@@ -29,7 +29,9 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    { resolve: `gatsby-source-filesystem`, options: { path: `./static` } },
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,

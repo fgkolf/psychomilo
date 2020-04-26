@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/Layout/layout'
 import ArticlePreview from '../components/article-preview'
+import ArticleBlogPreview from '../components/article-blog-preview'
 import useSiteTitle from '../utils/useSiteTitle'
 
 import '../components/base.css' // todo old css, keeps home grid properly
@@ -29,6 +30,7 @@ const RootIndex = ({ location, data }) => {
           <h1 className="section-headline">Πρόσφατες αναρτήσεις</h1>
           <ul className="article-list">
             {posts.map(({ node }) => (<ArticlePreview key={node.slug} article={node}/>))}
+            {posts.length > 5 && <ArticleBlogPreview />}
           </ul>
         </div>
       </Layout>
@@ -39,7 +41,7 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 5) {
       edges {
         node {
           title

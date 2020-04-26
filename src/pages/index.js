@@ -15,6 +15,7 @@ import '../utils/normalize.css'
 const RootIndex = ({ location, data }) => {
     const siteTitle = useSiteTitle();
     const posts = get(data, 'allContentfulBlogPost.edges')
+    const totalCount = get(data, 'allContentfulBlogPost.totalCount')
     const [author] = get(data, 'allContentfulPerson.edges')
     // todo remove all index not used related classes
     return (
@@ -30,7 +31,7 @@ const RootIndex = ({ location, data }) => {
           <h1 className="section-headline">Πρόσφατες αναρτήσεις</h1>
           <ul className="article-list">
             {posts.map(({ node }) => (<ArticlePreview key={node.slug} article={node}/>))}
-            {posts.length > 5 && <ArticleBlogPreview />}
+            {totalCount > 5 && <ArticleBlogPreview />}
           </ul>
         </div>
       </Layout>
@@ -42,6 +43,7 @@ export default RootIndex
 export const pageQuery = graphql`
   query HomeQuery {
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 5) {
+      totalCount,
       edges {
         node {
           title

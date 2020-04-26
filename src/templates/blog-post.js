@@ -2,12 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
 import Layout from '../components/Layout/layout'
-import heroStyles from '../components/hero.module.css'
 import Share from '../components/BlogPost/share'
 import BlogPostNavigation from '../components/BlogPost/blog-post-navigation'
 import useSiteUrl from '../utils/useSiteUrl'
+import HeroImage from '../components/hero-image'
 
 const BlogPostTemplate = ({ location, data }) => {
   const post = get(data, 'contentfulBlogPost')
@@ -17,13 +16,10 @@ const BlogPostTemplate = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet title={post.title}/>
-      <div className={heroStyles.hero}>
-        <Img
-          className={heroStyles.heroImage}
+        <HeroImage
           alt={post.title}
-          fluid={post.heroImage.fluid}
+          fluidImage={post.heroImage.fluid}
         />
-      </div>
       <article className="post-content page-template no-image wrapper">
         <div className="post-content-body">
           <h1 className="section-headline">{post.title}</h1>

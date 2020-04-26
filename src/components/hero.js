@@ -1,14 +1,14 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import HeroImage from './hero-image'
 
 import styles from './hero.module.css'
 
 export default ({ data }) => (
   <div className={styles.hero}>
-    <Img
-      className={styles.heroImage}
+    <HeroImage
       alt={data.name}
-      fluid={data.heroImage.fluid}
+      fluidImage={data.heroImage.fluid}
+      imageStyle={{}} // no margin wanted here
     />
     <div className={styles.heroDetails}>
       <h3 className={styles.heroHeadline}>{data.name}</h3>

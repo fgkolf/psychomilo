@@ -5,13 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/Layout/layout'
 import ArticlePreview from '../components/article-preview'
 import useSiteTitle from '../utils/useSiteTitle'
-import PreviewImage from '../components/preview-image'
-
-const imageStyle = {
-  height: '61.8vh',
-  maxHeight: '400px',
-  marginTop: '5vmin'
-}
+import HeroImage from '../components/hero-image'
 
 const BlogIndex = ({ location, data }) => {
     const posts = get(data, 'allContentfulBlogPost.edges')
@@ -20,7 +14,10 @@ const BlogIndex = ({ location, data }) => {
     return (
       <Layout location={location}>
         <Helmet title={siteTitle}/>
-        <PreviewImage fluidImage={blogImage} imageStyle={imageStyle} />
+        <HeroImage
+          alt="preview"
+          fluidImage={blogImage}
+        />
         <div className="wrapper">
           <h1 className="section-headline">Αναρτήσεις</h1>
           <ul className="article-list">

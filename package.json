@@ -17,6 +17,7 @@
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-purgecss": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-source-contentful": "^2.1.78",
     "gatsby-transformer-remark": "^2.1.6",
     "gatsby-transformer-sharp": "^2.4.7",

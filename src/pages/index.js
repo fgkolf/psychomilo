@@ -10,7 +10,6 @@ import useSiteTitle from '../utils/useSiteTitle';
 
 import '../components/base.css'; // todo old css, keeps home grid properly
 import '../utils/css/screen.css';
-import '../utils/normalize.css';
 
 const RootIndex = ({ location, data }) => {
   const siteTitle = useSiteTitle();

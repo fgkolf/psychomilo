@@ -9,8 +9,8 @@ const useSiteTitle = () => {
         }
       }
     }
-  `)
+  `);
   return data.site.siteMetadata.title;
-}
+};
 
 export default useSiteTitle;

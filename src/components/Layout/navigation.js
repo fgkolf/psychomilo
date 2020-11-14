@@ -1,31 +1,22 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
 const NavBurger = ({ toggle }) => (
-  <button
-    className="nav-burger"
-    type="button"
-    onClick={toggle}
-  >
-    <div
-      className="hamburger hamburger--collapse"
-      aria-label="Menu"
-      role="button"
-      aria-controls="navigation"
-    >
+  <button className="nav-burger" type="button" onClick={toggle}>
+    <div className="hamburger hamburger--collapse" aria-label="Menu" role="button" aria-controls="navigation">
       <div className="hamburger-box">
-        <div className="hamburger-inner"/>
+        <div className="hamburger-inner" />
       </div>
     </div>
   </button>
-)
+);
 
 const Navigation = ({ toggle, pathname, children }) => (
-  <React.Fragment>
+  <>
     <NavBurger toggle={toggle} />
     <nav className="site-head-fragment">
       <ul className="nav">
-        <li className={`nav ${pathname==='/' ? 'nav-current' : ''}`}>
+        <li className={`nav ${pathname === '/' ? 'nav-current' : ''}`}>
           <Link to="/">Αρχική</Link>
         </li>
         <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
@@ -44,7 +35,7 @@ const Navigation = ({ toggle, pathname, children }) => (
         </li>
       </ul>
     </nav>
-  </React.Fragment>
-)
+  </>
+);
 
-export default Navigation
+export default Navigation;

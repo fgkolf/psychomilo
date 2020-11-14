@@ -1,15 +1,24 @@
-const { MAILGUN_API_KEY, MAILGUN_DOMAIN, FROM_EMAIL_ADDRESS, CONTACT_TO_EMAIL_ADDRESS } = process.env
-const mailgun = require('mailgun-js')({ apiKey: MAILGUN_API_KEY, domain: MAILGUN_DOMAIN })
+const { MAILGUN_API_KEY, MAILGUN_DOMAIN, FROM_EMAIL_ADDRESS, CONTACT_TO_EMAIL_ADDRESS } = process.env;
+const mailgun = require('mailgun-js')({
+  apiKey: MAILGUN_API_KEY,
+  domain: MAILGUN_DOMAIN,
+});
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed', headers: { 'Allow': 'POST' } }
+    return {
+      statusCode: 405,
+      body: 'Method Not Allowed',
+      headers: { Allow: 'POST' },
+    };
   }
 
-  const { payload: { data } } = JSON.parse(event.body)
-  const { name, email, message } = data
+  const {
+    payload: { data },
+  } = JSON.parse(event.body);
+  const { name, email, message } = data;
   if (!message || !name || !email) {
-    return { statusCode: 422, body: 'Name, email, and message are required.' }
+    return { statusCode: 422, body: 'Name, email, and message are required.' };
   }
 
   const mailgunData = {
@@ -17,17 +26,18 @@ exports.handler = async (event) => {
     to: CONTACT_TO_EMAIL_ADDRESS,
     'h:Reply-To': email,
     subject: `New contact from ${name}`,
-    text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`
-  }
+    text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
+  };
 
-  return mailgun.messages()
+  return mailgun
+    .messages()
     .send(mailgunData)
     .then(() => ({
       statusCode: 200,
-      body: 'Your message was sent successfully!'
+      body: 'Your message was sent successfully!',
     }))
-    .catch(error => ({
+    .catch((error) => ({
       statusCode: 422,
-      body: JSON.stringify(error)
-    }))
-}
+      body: JSON.stringify(error),
+    }));
+};

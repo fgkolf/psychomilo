@@ -1,7 +1,7 @@
-import React from 'react'
-import Layout from '../components/Layout/layout'
-import ContactForm from '../components/Contact/contact-form'
-import CommunicationDetails from '../components/Contact/communication-details'
+import React from 'react';
+import Layout from '../components/Layout/layout';
+import ContactForm from '../components/Contact/contact-form';
+import CommunicationDetails from '../components/Contact/communication-details';
 
 const Contact = ({ location }) => (
   <Layout location={location}>
@@ -13,6 +13,6 @@ const Contact = ({ location }) => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default Contact
+export default Contact;

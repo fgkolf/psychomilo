@@ -9,8 +9,8 @@ const useSiteUrl = () => {
         }
       }
     }
-  `)
+  `);
   return data.site.siteMetadata.url;
-}
+};
 
 export default useSiteUrl;

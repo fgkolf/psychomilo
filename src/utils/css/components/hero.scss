@@ -1,0 +1,37 @@
+.hero-image {
+  width: 85px;
+  height: 75px;
+}
+
+.hero-details {
+  width: 70%;
+  margin-top: 50px;
+  line-height: 16px;
+
+  p {
+    margin: 0;
+    width: 80%;
+  }
+
+  p:nth-child(2) {
+    color: $brand-color;
+  }
+
+  hr {
+    height: 3px;
+    border-radius: 10px;
+    border: 1px solid $brand-color;
+    background-color: $brand-color;
+    margin: 25px 0;
+  }
+
+  button {
+    margin-top: 25px;
+    background-color: $brand-color;
+    border-radius: 20px;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

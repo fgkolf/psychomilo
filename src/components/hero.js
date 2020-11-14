@@ -1,19 +1,23 @@
 import React from 'react';
-import HeroImage from './hero-image';
+import Img from 'gatsby-image';
+import Share from './BlogPost/share';
 
-import styles from './hero.module.css';
-
-export default ({ data }) => (
-  <div className={styles.hero}>
-    <HeroImage
-      alt={data.name}
-      fluidImage={data.heroImage.fluid}
-      imageStyle={{}} // no margin wanted here
-    />
-    <div className={styles.heroDetails}>
-      <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p className={styles.heroTitle}>{data.title}</p>
+const Hero = ({ data }) => (
+  <div>
+    <Img alt={data.name} fluid={data.heroImage.fluid} className="hero-image" />
+    <div className="hero-details">
+      <p>
+        <strong>{data.name}</strong>
+      </p>
+      <p>{data.title}</p>
+      <p>{data.company}</p>
+      <hr />
       <p>{data.shortBio.shortBio}</p>
+      <hr />
+      <Share url="/" title="the title" />
+      <button type="button">SCHEDULE AN APPOINTMENT</button>
     </div>
   </div>
 );
+
+export default Hero;

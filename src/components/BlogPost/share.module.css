@@ -1,15 +1,7 @@
-.shareContainer {
-  display: table;   /* Allow the centering to work */
-  margin: 4em auto;
-}
-
-.shareHeader {
-  text-align: center;
-  font-size: 1.7rem;
-}
-
 .shareIcons {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .shareIcons li {
@@ -44,5 +36,3 @@
 .linkedin {
   color: #0077b5 !important;
 }
-
-/* TODO remove importants!! */

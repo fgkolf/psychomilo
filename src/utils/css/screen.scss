@@ -1,0 +1,12 @@
+/* Local component imports
+/* ---------------------------------------------------------- */
+@import "components/variables";
+@import "components/global";
+@import "components/animations";
+@import "components/hero";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 80px 150px;
+}

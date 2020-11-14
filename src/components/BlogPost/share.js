@@ -6,8 +6,7 @@ import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 're
 import styles from './share.module.css';
 
 const Share = ({ url, title }) => (
-  <div className={styles.shareContainer}>
-    <div className={styles.shareHeader}>Share this article</div>
+  <div>
     <ul className={styles.shareIcons}>
       <li>
         <FacebookShareButton url={url} className={[styles.shareIcon, styles.facebook]}>

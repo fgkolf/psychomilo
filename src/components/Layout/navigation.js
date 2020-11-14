@@ -11,22 +11,18 @@ const NavBurger = ({ toggle }) => (
   </button>
 );
 
-const Navigation = ({ toggle, pathname, children }) => (
-  <>
+// TODO: THIS IS HIDDEN
+const Navigation = ({ toggle, pathname }) => (
+  <div style={{ display: 'none' }}>
     <NavBurger toggle={toggle} />
-    <nav className="site-head-fragment">
-      <ul className="nav">
+    <nav>
+      <ul>
         <li className={`nav ${pathname === '/' ? 'nav-current' : ''}`}>
           <Link to="/">Αρχική</Link>
         </li>
         <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
           <Link to="/blog">Blog</Link>
         </li>
-      </ul>
-    </nav>
-    {children}
-    <nav className="site-head-fragment">
-      <ul className="nav">
         <li className={`nav ${pathname.startsWith('/about') ? 'nav-current' : ''}`}>
           <Link to="/about">About</Link>
         </li>
@@ -35,7 +31,7 @@ const Navigation = ({ toggle, pathname, children }) => (
         </li>
       </ul>
     </nav>
-  </>
+  </div>
 );
 
 export default Navigation;

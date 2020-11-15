@@ -4,17 +4,14 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/layout';
 import ArticlePreview from '../components/article-preview';
-import useSiteTitle from '../utils/useSiteTitle';
-import HeroImage from '../components/hero-image';
+import useSiteTitle from '../utils/helpers/useSiteTitle';
 
 const BlogIndex = ({ location, data }) => {
   const posts = get(data, 'allContentfulBlogPost.edges');
-  const blogImage = get(data, 'file.childImageSharp.fluid');
   const siteTitle = useSiteTitle();
   return (
     <Layout location={location}>
       <Helmet title={siteTitle} />
-      <HeroImage alt="preview" fluidImage={blogImage} />
       <div className="wrapper">
         <h1 className="section-headline">Αναρτήσεις</h1>
         <ul className="article-list">
@@ -48,13 +45,6 @@ export const pageQuery = graphql`
               html
             }
           }
-        }
-      }
-    }
-    file(relativePath: { eq: "blog.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

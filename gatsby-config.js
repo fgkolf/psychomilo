@@ -40,7 +40,6 @@ module.exports = {
         ],
       },
     },
-    { resolve: `gatsby-source-filesystem`, options: { path: `./static` } },
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,

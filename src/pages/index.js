@@ -4,7 +4,7 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/layout';
 import ArticlePreview from '../components/article-preview';
-import useSiteTitle from '../utils/useSiteTitle';
+import useSiteTitle from '../utils/helpers/useSiteTitle';
 
 import '../utils/css/screen.scss';
 

@@ -5,7 +5,7 @@ import get from 'lodash/get';
 import Layout from '../components/Layout/layout';
 import Share from '../components/BlogPost/share';
 import BlogPostNavigation from '../components/BlogPost/blog-post-navigation';
-import useSiteUrl from '../utils/useSiteUrl';
+import useSiteUrl from '../utils/helpers/useSiteUrl';
 import HeroImage from '../components/hero-image';
 
 const BlogPostTemplate = ({ location, data }) => {

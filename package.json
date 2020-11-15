@@ -28,9 +28,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-share": "^4.3.1",
-    "typeface-amatic-sc": "^0.0.72",
-    "typeface-lato": "^0.0.75"
+    "react-share": "^4.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

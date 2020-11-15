@@ -20,7 +20,8 @@ const Layout = ({ children, location, author }) => {
       <div>{children}</div>
       <BackToTop />
       <footer>
-        &copy; {new Date().getFullYear()} <Link to="/">{siteTitle}</Link>
+        &copy;
+        <Link to="/">{siteTitle}</Link>
       </footer>
     </div>
   );

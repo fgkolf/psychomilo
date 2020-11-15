@@ -47,14 +47,6 @@ export const pageQuery = graphql`
         }
       }
       slug
-      next {
-        title
-        slug
-      }
-      previous {
-        title
-        slug
-      }
       body {
         childMarkdownRemark {
           html

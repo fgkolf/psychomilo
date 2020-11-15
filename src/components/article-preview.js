@@ -1,22 +1,25 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PreviewImage from './preview-image';
+import Img from 'gatsby-image';
 
-import styles from './article-preview.module.css';
-
-export default (
-  { article } // todo remove all post card post etc related classes and styles.tag
-) => (
-  <li className={styles.articleNode}>
-    <Link className={styles.articleLink} to={`/blog/${article.slug}`}>
-      <PreviewImage fluidImage={article.heroImage.fluid} />
-      <h3 className={styles.previewTitle}>{article.title}</h3>
-    </Link>
-    <small>{article.publishDate}</small>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
-      }}
-    />
+const ArticlePreview = ({ article }) => (
+  <li className="article-node">
+    <Img alt={article.title} fixed={article.heroImage.fixed} />
+    <div className="article-details">
+      <Link className="article-link" to={`/blog/${article.slug}`}>
+        {article.title}
+      </Link>
+      <p>{`${article.publishDate.toUpperCase()} | CATEGORY`}</p>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: article.description.childMarkdownRemark.html,
+        }}
+      />
+      <Link className="read-more" to={`/blog/${article.slug}`}>
+        <strong>Read more...</strong>
+      </Link>
+    </div>
   </li>
 );
+
+export default ArticlePreview;

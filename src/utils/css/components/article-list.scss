@@ -1,0 +1,35 @@
+.article-list {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-gap: 2rem;
+
+	.article-node {
+		display: grid;
+		grid-template-columns: 1fr minmax(300px, 3fr);
+		grid-gap: 15px;
+		height: 240px;
+
+		img {
+			border-radius: 20px;
+		}
+	}
+
+	.article-details {
+		overflow: hidden;
+		color: $brand-color;
+		font-weight: bold;
+	}
+
+	.article-link {
+		color: #000000;
+		text-decoration: none;
+		font-size: $font-size-big;
+	}
+
+	.read-more {
+		margin: 0;
+		padding: 0;
+		color: $brand-color-dark;
+		text-decoration: none;
+	}
+}

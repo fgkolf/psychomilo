@@ -16,7 +16,7 @@ const RootIndex = ({ location, data }) => {
     <Layout location={location} author={author}>
       <Helmet title={siteTitle} />
       <div>
-        <ul>
+        <ul className="article-list">
           {posts.map(({ node }) => (
             <ArticlePreview key={node.slug} article={node} />
           ))}
@@ -36,10 +36,10 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "DD MMMM YYYY")
           heroImage {
-            fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid
+            fixed(width: 240, height: 240) {
+              ...GatsbyContentfulFixed
             }
           }
           description {
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
             shortBio
           }
           heroImage: image {
-            fluid(maxWidth: 85, maxHeight: 75, resizingBehavior: PAD) {
+            fluid(maxWidth: 85, maxHeight: 75, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid
             }
           }

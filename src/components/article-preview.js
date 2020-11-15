@@ -10,7 +10,7 @@ const ArticlePreview = ({ article }) => (
         {article.title}
       </Link>
       <p className="subtitle">{`${article.publishDate.toUpperCase()} | CATEGORY`}</p>
-      <p
+      <div
         dangerouslySetInnerHTML={{
           __html: article.description.childMarkdownRemark.html,
         }}

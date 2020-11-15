@@ -6,10 +6,10 @@ const ArticlePreview = ({ article }) => (
   <li className="article-node">
     <Img alt={article.title} fixed={article.heroImage.fixed} />
     <div className="article-details">
-      <Link className="article-link" to={`/blog/${article.slug}`}>
+      <Link className="title" to={`/blog/${article.slug}`}>
         {article.title}
       </Link>
-      <p>{`${article.publishDate.toUpperCase()} | CATEGORY`}</p>
+      <p className="subtitle">{`${article.publishDate.toUpperCase()} | CATEGORY`}</p>
       <p
         dangerouslySetInnerHTML={{
           __html: article.description.childMarkdownRemark.html,

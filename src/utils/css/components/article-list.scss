@@ -12,24 +12,28 @@
 		img {
 			border-radius: 20px;
 		}
-	}
 
-	.article-details {
-		overflow: hidden;
-		color: $brand-color;
-		font-weight: bold;
-	}
+		.article-details {
+			overflow: hidden;
+			color: $brand-color;
+			font-weight: bold;
 
-	.article-link {
-		color: #000000;
-		text-decoration: none;
-		font-size: $font-size-big;
-	}
+			.title {
+				color: #000000;
+				text-decoration: none;
+				font-size: $font-size-big;
+			}
 
-	.read-more {
-		margin: 0;
-		padding: 0;
-		color: $brand-color-dark;
-		text-decoration: none;
+			.subtitle {
+				font-size: $font-size-small;
+			}
+
+			.read-more {
+				margin: 0;
+				padding: 0;
+				color: $brand-color-dark;
+				text-decoration: none;
+			}
+		}
 	}
 }

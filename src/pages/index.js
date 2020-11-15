@@ -11,9 +11,8 @@ import '../utils/css/screen.scss';
 const RootIndex = ({ location, data }) => {
   const siteTitle = useSiteTitle();
   const posts = get(data, 'allContentfulBlogPost.edges');
-  const [author] = get(data, 'allContentfulPerson.edges');
   return (
-    <Layout location={location} author={author}>
+    <Layout location={location}>
       <Helmet title={siteTitle} />
       <div>
         <ul className="article-list">
@@ -45,23 +44,6 @@ export const pageQuery = graphql`
           description {
             childMarkdownRemark {
               html
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          name
-          title
-          company
-          shortBio {
-            shortBio
-          }
-          heroImage: image {
-            fluid(maxWidth: 85, maxHeight: 75, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid
             }
           }
         }

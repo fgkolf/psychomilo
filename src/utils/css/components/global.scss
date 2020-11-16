@@ -18,3 +18,19 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: $font-size-big;
+}
+
+h2 {
+    font-size: $font-size-big*0.8;
+}
+
+h3 {
+    font-size: $font-size-big*0.7;
+}

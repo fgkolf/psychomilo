@@ -1,11 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
 import Share from '../components/BlogPost/share';
-import BlogPostNavigation from '../components/BlogPost/blog-post-navigation';
 import useSiteUrl from '../utils/helpers/useSiteUrl';
-import HeroImage from '../components/BlogPost/hero-image';
 
 const BlogPostTemplate = ({ location, data }) => {
   const post = data.contentfulBlogPost;
@@ -15,20 +14,22 @@ const BlogPostTemplate = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet title={post.title} />
-      <HeroImage alt={post.title} fluidImage={post.heroImage.fluid} />
-      <article className="post-content page-template no-image wrapper">
-        <div className="post-content-body">
-          <h1 className="section-headline">{post.title}</h1>
-          <p style={{ display: 'block' }}>{post.publishDate}</p>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: post.body.childMarkdownRemark.html,
-            }}
-          />
-          <Share url={socialUrl} title={post.title} />
-        </div>
+      <Img
+        style={{ maxHeight: 'calc(35vh - 5rem)', minHeight: '200px' }}
+        alt={post.title}
+        fluid={post.heroImage.fluid}
+      />
+      <article>
+        <h1 className="title">{post.title}</h1>
+        <p className="subtitle">{`${post.publishDate.toUpperCase()} | CATEGORY`}</p>
+        <div
+          className="article-body"
+          dangerouslySetInnerHTML={{
+            __html: post.body.childMarkdownRemark.html,
+          }}
+        />
+        <Share url={socialUrl} title={post.title} />
       </article>
-      <BlogPostNavigation previous={post.previous} next={post.next} />
     </Layout>
   );
 };
@@ -41,7 +42,7 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
+        fluid {
           ...GatsbyContentfulFluid
         }
       }

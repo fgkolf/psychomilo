@@ -14,7 +14,7 @@ const Item = ({ icon, content }) => (
 const CommunicationDetails = () => {
   return (
     <div>
-      <h4>Επικοινωνία</h4>
+      <h3>Επικοινωνία</h3>
       <Item
         icon={faMapMarkerAlt}
         content={

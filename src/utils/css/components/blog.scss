@@ -1,0 +1,17 @@
+article {
+	width: 66%;
+	margin-top: 3em;
+
+	.title {
+		margin: 0
+	}
+
+	.article-body {
+		margin-top: 1.5em;
+	}
+
+	// TODO: define breakpoint centrally
+	@media (max-width: 800px) {
+		width: 100%;
+	}
+}

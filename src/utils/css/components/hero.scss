@@ -12,20 +12,20 @@
   }
 
   p:nth-child(2) {
-    color: $brand-color;
+    color: $color-brand;
   }
 
   hr {
     height: 3px;
     border-radius: 10px;
-    border: 1px solid $brand-color;
-    background-color: $brand-color;
+    border: 1px solid $color-brand;
+    background-color: $color-brand;
     margin: 25px 0;
   }
 
   button {
     margin-top: 25px;
-    background-color: $brand-color;
+    background-color: $color-brand;
     border-radius: 20px;
     color: white;
     padding: 12px;

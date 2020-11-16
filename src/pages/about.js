@@ -1,7 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import Layout from '../components/Layout/layout';
 
 import styles from './about.module.css';
@@ -22,7 +21,7 @@ const part5 =
   'Sed a enim vitae ante imperdiet dignissim vitae vitae neque. Aenean suscipit est non libero pretium molestie. Fusce vel est in tortor consequat convallis at vel mauris. Nullam dictum auctor pretium. Donec placerat nec lacus vel facilisis. Aenean sed ultrices magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur vestibulum justo, nec rhoncus elit consectetur sit amet. Donec dui libero, rhoncus vel lorem quis, mollis condimentum dui. Nullam tempus feugiat nibh, ut mollis ligula interdum id. Duis molestie commodo interdum. Cras eget urna vitae felis posuere dapibus eu et quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.';
 
 const About = ({ location, data }) => {
-  const [author] = get(data, 'allContentfulPerson.edges');
+  const [author] = data.allContentfulPerson.edges;
   const { heroImage } = author.node;
   return (
     <Layout location={location}>

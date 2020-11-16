@@ -1,13 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/layout';
 import ArticlePreview from '../components/article-preview';
 import useSiteTitle from '../utils/helpers/useSiteTitle';
 
 const BlogIndex = ({ location, data }) => {
-  const posts = get(data, 'allContentfulBlogPost.edges');
+  const posts = data.allContentfulBlogPost.edges;
   const siteTitle = useSiteTitle();
   return (
     <Layout location={location}>

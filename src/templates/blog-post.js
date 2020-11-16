@@ -1,15 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import get from 'lodash/get';
 import Layout from '../components/Layout/layout';
 import Share from '../components/BlogPost/share';
 import BlogPostNavigation from '../components/BlogPost/blog-post-navigation';
 import useSiteUrl from '../utils/helpers/useSiteUrl';
-import HeroImage from '../components/hero-image';
+import HeroImage from '../components/BlogPost/hero-image';
 
 const BlogPostTemplate = ({ location, data }) => {
-  const post = get(data, 'contentfulBlogPost');
+  const post = data.contentfulBlogPost;
   const url = useSiteUrl();
   const socialUrl = `${url}/blog/${post.slug}`;
 

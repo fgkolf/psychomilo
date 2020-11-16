@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import Navigation from './navigation';
 import BackToTop from './back-to-top';
 import useSiteTitle from '../../utils/helpers/useSiteTitle';
-import Hero from '../hero';
+import Hero from './hero';
 
 const useHero = () => {
   const data = useStaticQuery(graphql`

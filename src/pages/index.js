@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Layout from '../components/Layout/layout';
 import ArticlePreview from '../components/article-preview';
@@ -10,7 +9,7 @@ import '../utils/css/screen.scss';
 
 const RootIndex = ({ location, data }) => {
   const siteTitle = useSiteTitle();
-  const posts = get(data, 'allContentfulBlogPost.edges');
+  const posts = data.allContentfulBlogPost.edges;
   return (
     <Layout location={location}>
       <Helmet title={siteTitle} />

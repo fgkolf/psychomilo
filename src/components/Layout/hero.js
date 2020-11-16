@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Share from './BlogPost/share';
+import Share from '../BlogPost/share';
 
 const Hero = ({ data }) => (
   <div>

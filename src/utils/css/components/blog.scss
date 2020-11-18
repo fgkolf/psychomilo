@@ -10,8 +10,7 @@ article {
 		margin-top: 1.5em;
 	}
 
-	// TODO: define breakpoint centrally
-	@media (max-width: 800px) {
+	@media (max-width: $bp-tablet) {
 		width: 100%;
 	}
 }

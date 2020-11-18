@@ -1,35 +1,37 @@
-.hero-image {
-  width: 85px;
-  height: 75px;
-}
-
-.hero-details {
-  margin-top: 50px;
-
-  p {
-    margin: 0;
-    width: 70%;
+aside {
+  .hero-image {
+    width: 85px;
+    height: 75px;
   }
 
-  p:nth-child(2) {
-    color: $color-brand;
-  }
+  .hero-details {
+    margin-top: 50px;
 
-  hr {
-    height: 3px;
-    border-radius: 10px;
-    border: 1px solid $color-brand;
-    background-color: $color-brand;
-    margin: 25px 0;
-  }
+    p {
+      margin: 0;
+      width: 70%;
+    }
 
-  button {
-    margin-top: 25px;
-    background-color: $color-brand;
-    border-radius: 20px;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-    font-weight: bold;
+    p:nth-child(2) {
+      color: $color-brand;
+    }
+
+    hr {
+      height: 3px;
+      border-radius: 10px;
+      border: 1px solid $color-brand;
+      background-color: $color-brand;
+      margin: 25px 0;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: $color-brand;
+      border-radius: 20px;
+      color: white;
+      padding: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   }
 }

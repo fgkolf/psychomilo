@@ -8,26 +8,22 @@ import Hero from './hero';
 const useHero = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-        edges {
-          node {
-            name
-            title
-            company
-            shortBio {
-              shortBio
-            }
-            heroImage: image {
-              fluid(maxWidth: 85, maxHeight: 75) {
-                ...GatsbyContentfulFluid
-              }
-            }
+      contentfulPerson(contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" }) {
+        name
+        title
+        company
+        shortBio {
+          shortBio
+        }
+        heroImage: image {
+          fluid(maxWidth: 85, maxHeight: 75) {
+            ...GatsbyContentfulFluid
           }
         }
       }
     }
   `);
-  return data.allContentfulPerson.edges[0];
+  return data.contentfulPerson;
 };
 
 const Layout = ({ children, location }) => {
@@ -41,7 +37,7 @@ const Layout = ({ children, location }) => {
     <div className="wrapper">
       <aside>
         <Navigation toggle={toggle} pathname={location.pathname} />
-        <Hero data={hero.node} />
+        <Hero data={hero} />
       </aside>
       <div>{children}</div>
       <BackToTop />

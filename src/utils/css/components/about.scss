@@ -1,0 +1,14 @@
+.about-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 2rem;
+
+	.title {
+		margin: 0
+	}
+
+	.about-image {
+		height: 30vw;
+		max-height: 600px;
+	}
+}

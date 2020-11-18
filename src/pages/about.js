@@ -3,8 +3,6 @@ import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout/layout';
 
-import styles from './about.module.css';
-
 const part1 =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend magna eget ante sollicitudin, eu molestie mauris venenatis. Quisque dui felis, varius tincidunt finibus at, blandit eget metus.';
 
@@ -21,21 +19,18 @@ const part5 =
   'Sed a enim vitae ante imperdiet dignissim vitae vitae neque. Aenean suscipit est non libero pretium molestie. Fusce vel est in tortor consequat convallis at vel mauris. Nullam dictum auctor pretium. Donec placerat nec lacus vel facilisis. Aenean sed ultrices magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur vestibulum justo, nec rhoncus elit consectetur sit amet. Donec dui libero, rhoncus vel lorem quis, mollis condimentum dui. Nullam tempus feugiat nibh, ut mollis ligula interdum id. Duis molestie commodo interdum. Cras eget urna vitae felis posuere dapibus eu et quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.';
 
 const About = ({ location, data }) => {
-  const [author] = data.allContentfulPerson.edges;
-  const { heroImage } = author.node;
+  const aboutImage = data.contentfulAsset.fluid;
   return (
     <Layout location={location}>
-      <div className="wrapper">
-        <h1>About Me</h1>
-        <div className={styles.aboutWrapper}>
-          <Img className={styles.aboutImage} fluid={heroImage.fluid} />
-          <div className={styles.aboutText}>
-            <p>{part1}</p>
-            <p>{part2}</p>
-            <p>{part3}</p>
-            <p>{part4}</p>
-            <p>{part5}</p>
-          </div>
+      <div className="about-wrapper">
+        <Img className="about-image" fluid={aboutImage} />
+        <div>
+          <h1 className="title">Title</h1>
+          <p>{part1}</p>
+          <p>{part2}</p>
+          <p>{part3}</p>
+          <p>{part4}</p>
+          <p>{part5}</p>
         </div>
       </div>
     </Layout>
@@ -46,15 +41,9 @@ export default About;
 
 export const pageQuery = graphql`
   query {
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
-      edges {
-        node {
-          heroImage: image {
-            fluid(resizingBehavior: PAD) {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
+    contentfulAsset(title: { eq: "about" }) {
+      fluid(maxHeight: 800) {
+        ...GatsbyContentfulFluid
       }
     }
   }

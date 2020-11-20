@@ -6,13 +6,13 @@ import Layout from '../components/Layout/layout';
 import Share from '../components/BlogPost/share';
 import useSiteUrl from '../utils/helpers/useSiteUrl';
 
-const BlogPostTemplate = ({ location, data }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.contentfulBlogPost;
   const url = useSiteUrl();
   const socialUrl = `${url}/blog/${post.slug}`;
 
   return (
-    <Layout location={location}>
+    <Layout>
       <Helmet title={post.title} />
       <div>
         <Img
@@ -24,7 +24,7 @@ const BlogPostTemplate = ({ location, data }) => {
           <h1 className="title">{post.title}</h1>
           <p className="subtitle">{`${post.publishDate.toUpperCase()} | CATEGORY`}</p>
           <div
-            className="article-body"
+            className="blog-post-body"
             dangerouslySetInnerHTML={{
               __html: post.body.childMarkdownRemark.html,
             }}

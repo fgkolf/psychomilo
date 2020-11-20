@@ -1,15 +1,15 @@
-.article-list {
+.blog-post-list {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-gap: 2rem;
 
-	.article-node {
+	.blog-post-node {
 		display: grid;
 		grid-template-columns: minmax(200px, 1fr) minmax(200px, 3fr);
 		grid-gap: 15px;
 		height: 240px;
 
-		.article-details {
+		.blog-post-details {
 			overflow: hidden;
 			font-weight: bold;
 			color: $color-gray;

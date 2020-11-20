@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import wave from '../../../static/images/wave.svg';
 import logo from '../../../static/images/logo.svg';
 
-const Navigation = ({ pathname }) => {
+const Navigation = () => {
   const [showNav, setShowNav] = React.useState(false);
 
   useEffect(() => {
@@ -32,17 +32,25 @@ const Navigation = ({ pathname }) => {
     <div className="overlay navigation">
       <nav>
         <ul>
-          <li className={`nav ${pathname === '/' ? 'nav-current' : ''}`}>
-            <Link to="/">ΑΡΧΙΚΗ</Link>
+          <li>
+            <Link onClick={toggle} to="/">
+              ΑΡΧΙΚΗ
+            </Link>
           </li>
-          <li className={`nav ${pathname.startsWith('/blog') ? 'nav-current' : ''}`}>
-            <Link to="/blog">BLOG</Link>
+          <li>
+            <Link onClick={toggle} to="/blog">
+              BLOG
+            </Link>
           </li>
-          <li className={`nav ${pathname.startsWith('/about') ? 'nav-current' : ''}`}>
-            <Link to="/about">ABOUT</Link>
+          <li>
+            <Link onClick={toggle} to="/about">
+              ABOUT
+            </Link>
           </li>
-          <li className={`nav ${pathname.startsWith('/contact') ? 'nav-current' : ''}`}>
-            <Link to="/contact">CONTACT</Link>
+          <li>
+            <Link onClick={toggle} to="/contact">
+              CONTACT
+            </Link>
           </li>
         </ul>
       </nav>

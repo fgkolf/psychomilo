@@ -20,12 +20,12 @@ const useHero = () => {
   return data.contentfulPerson;
 };
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
   const hero = useHero();
   return (
     <div className="wrapper">
       <aside>
-        <Navigation pathname={location.pathname} />
+        <Navigation />
         <Hero data={hero} />
       </aside>
       <div>{children}</div>

@@ -36,8 +36,8 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "DD MMMM YYYY")
           heroImage {
-            fixed(width: 240, height: 240) {
-              ...GatsbyContentfulFixed
+            fluid(maxWidth: 500, maxHeight: 500) {
+              ...GatsbyContentfulFluid
             }
           }
           description {

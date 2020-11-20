@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 const ArticlePreview = ({ article }) => (
   <li className="article-node">
-    <Img alt={article.title} fixed={article.heroImage.fixed} />
+    <Img alt={article.title} fluid={article.heroImage.fluid} />
     <div className="article-details">
       <Link className="title" to={`/blog/${article.slug}`}>
         {article.title}

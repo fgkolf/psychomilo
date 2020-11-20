@@ -14,22 +14,24 @@ const BlogPostTemplate = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet title={post.title} />
-      <Img
-        style={{ maxHeight: 'calc(35vh - 5rem)', minHeight: '200px' }}
-        alt={post.title}
-        fluid={post.heroImage.fluid}
-      />
-      <article>
-        <h1 className="title">{post.title}</h1>
-        <p className="subtitle">{`${post.publishDate.toUpperCase()} | CATEGORY`}</p>
-        <div
-          className="article-body"
-          dangerouslySetInnerHTML={{
-            __html: post.body.childMarkdownRemark.html,
-          }}
+      <div>
+        <Img
+          style={{ maxHeight: 'calc(35vh - 5rem)', minHeight: '200px' }}
+          alt={post.title}
+          fluid={post.heroImage.fluid}
         />
-        <Share url={socialUrl} title={post.title} />
-      </article>
+        <article>
+          <h1 className="title">{post.title}</h1>
+          <p className="subtitle">{`${post.publishDate.toUpperCase()} | CATEGORY`}</p>
+          <div
+            className="article-body"
+            dangerouslySetInnerHTML={{
+              __html: post.body.childMarkdownRemark.html,
+            }}
+          />
+          <Share url={socialUrl} title={post.title} />
+        </article>
+      </div>
     </Layout>
   );
 };

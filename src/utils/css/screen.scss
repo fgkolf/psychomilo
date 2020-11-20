@@ -32,8 +32,16 @@ body {
   }
 
   @media (max-width: $bp-tablet) {
-    grid-gap: 4.5%;
+    grid-template-columns: 1fr;
     margin: 1% 4.5% 1% 1.75%;
+
+    aside {
+      display: none;
+    }
+  }
+
+  @media (max-width: $bp-mobile) {
+    margin: 0;
   }
 }
 

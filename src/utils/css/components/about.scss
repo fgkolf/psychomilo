@@ -11,4 +11,9 @@
 		height: 30vw;
 		max-height: 600px;
 	}
+
+	@media (max-width: $bp-tablet) {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 }

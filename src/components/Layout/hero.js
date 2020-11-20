@@ -1,10 +1,10 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import Share from '../BlogPost/share';
+import logo from '../../../static/images/logo.svg';
 
 const Hero = ({ data }) => (
   <div>
-    <Img alt={data.name} fluid={data.heroImage.fluid} className="hero-image" />
+    <img src={logo} alt={data.name} className="hero-image" />
     <div className="hero-details">
       <p>
         <strong>{data.name}</strong>

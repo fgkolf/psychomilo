@@ -14,11 +14,6 @@ const useHero = () => {
         shortBio {
           shortBio
         }
-        heroImage: image {
-          fluid(maxWidth: 85, maxHeight: 75) {
-            ...GatsbyContentfulFluid
-          }
-        }
       }
     }
   `);

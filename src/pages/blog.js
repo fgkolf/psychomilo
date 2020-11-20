@@ -11,8 +11,7 @@ const BlogIndex = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet title={siteTitle} />
-      <div className="wrapper">
-        <h1 className="section-headline">Αναρτήσεις</h1>
+      <div>
         <ul className="article-list">
           {posts.map(({ node }) => (
             <ArticlePreview key={node.slug} article={node} />
@@ -32,11 +31,11 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "DD MMMM YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 700, maxHeight: 392, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid
+            fixed(width: 240, height: 240) {
+              ...GatsbyContentfulFixed
             }
           }
           description {

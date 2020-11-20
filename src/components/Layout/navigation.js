@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 import wave from '../../../static/images/wave.svg';
+import logo from '../../../static/images/logo.svg';
 
 const Navigation = ({ pathname }) => {
   const [showNav, setShowNav] = React.useState(false);
@@ -20,25 +21,15 @@ const Navigation = ({ pathname }) => {
 
   if (!showNav) {
     return (
-      <>
-        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-        <div
-          className="burger"
-          aria-label="Menu"
-          role="button"
-          aria-controls="navigation"
-          tabIndex={0}
-          onClick={toggle}
-        >
-          <span />
-          <span />
-          <span />
-        </div>
-      </>
+      <div className="burger" aria-label="Menu" role="button" aria-controls="navigation" tabIndex={0} onClick={toggle}>
+        <span />
+        <span />
+        <span />
+      </div>
     );
   }
   return (
-    <div className="overlay" onClick={toggle}>
+    <div className="overlay navigation">
       <nav>
         <ul>
           <li className={`nav ${pathname === '/' ? 'nav-current' : ''}`}>
@@ -56,8 +47,12 @@ const Navigation = ({ pathname }) => {
         </ul>
       </nav>
       <div className="wave">
-        <img src={wave} />
+        <img src={wave} alt="wave" />
       </div>
+      <img className="site-logo" src={logo} alt="logo" />
+      <button type="button" onClick={toggle} className="close">
+        Close
+      </button>
     </div>
   );
 };

@@ -6,6 +6,7 @@
     "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}],
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",
-    "react/no-danger": "off"
+    "react/no-danger": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   }
 }

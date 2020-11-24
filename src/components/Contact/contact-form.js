@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './contact-form.module.css';
 import ResultNotification from './result-notification';
 
 const encode = (data) =>
@@ -66,50 +65,42 @@ const ContactForm = () => {
 
   return (
     <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
-      <div className="row">
-        <input type="hidden" name="form-name" value="contact" />
-        <div className="col-12">
-          <input
-            type="text"
-            name="name"
-            placeholder="Όνομα"
-            onChange={handleChange}
-            value={formValues.name}
-            className={errors.name && styles.error}
-          />
-          {errors.name && <span className={styles.errorMsg}>{errors.name}</span>}
-        </div>
-        <div className="col-12">
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            onChange={handleChange}
-            value={formValues.email}
-            className={errors.email && styles.error}
-          />
-          {errors.email && <span className={styles.errorMsg}>{errors.email}</span>}
-        </div>
-        <div className="col-12">
-          <textarea
-            name="message"
-            placeholder="Εισάγετε το μήνυμα σας"
-            rows="8"
-            onChange={handleChange}
-            value={formValues.message}
-            className={errors.message && styles.error}
-          />
-          {errors.message && <span className={styles.errorMsg}>{errors.message}</span>}
-        </div>
-        <div className={['col-12', styles.buttonWrap].join(' ')}>
-          {result ? (
-            <ResultNotification result={result} />
-          ) : (
-            <button type="submit" className={styles.submitBtn}>
-              Αποστολή
-            </button>
-          )}
-        </div>
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <input
+          type="text"
+          name="name"
+          placeholder="Όνομα"
+          onChange={handleChange}
+          value={formValues.name}
+          className={errors.name && 'error'}
+        />
+        {errors.name && <span className="error-msg">{errors.name}</span>}
+      </div>
+      <div>
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+          value={formValues.email}
+          className={errors.email && 'error'}
+        />
+        {errors.email && <span className="error-msg">{errors.email}</span>}
+      </div>
+      <div>
+        <textarea
+          name="message"
+          placeholder="Εισάγετε το μήνυμα σας..."
+          rows="8"
+          onChange={handleChange}
+          value={formValues.message}
+          className={errors.message && 'error'}
+        />
+        {errors.message && <span className="error-msg">{errors.message}</span>}
+      </div>
+      <div className="button-area">
+        {result ? <ResultNotification result={result} /> : <button type="submit">Αποστολή</button>}
       </div>
     </form>
   );

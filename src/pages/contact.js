@@ -5,7 +5,8 @@ import CommunicationDetails from '../components/Contact/communication-details';
 
 const Contact = () => (
   <Layout>
-    <div>
+    <div className="contact-wrapper">
+      <h1>Get in touch</h1>
       <ContactForm />
       <br />
       <CommunicationDetails />

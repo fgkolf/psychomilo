@@ -50,32 +50,4 @@
 			display: none;
 		}
 	}
-
-	.close {
-		position: absolute;
-		right: 2vh;
-		width: 32px;
-		height: 32px;
-		opacity: 1;
-		font-size: 0;
-		cursor: pointer;
-		background: none;
-	}
-	.close:hover {
-		opacity: 0.3;
-	}
-	.close::before, .close::after {
-		position: absolute;
-		content: ' ';
-		height: 33px;
-		width: 3px;
-		background-color: $color-brand-dark;
-		border-radius: 20px;
-	}
-	.close::before {
-		transform: rotate(45deg);
-	}
-	.close::after {
-		transform: rotate(-45deg);
-	}
 }

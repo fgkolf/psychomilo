@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import wave from '../../../static/images/wave.svg';
 import logo from '../../../static/images/logo.svg';
 
 const Navigation = () => {
-  const [showNav, setShowNav] = React.useState(false);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const html = document.querySelector('html');
@@ -29,38 +29,40 @@ const Navigation = () => {
     );
   }
   return (
-    <div className="overlay navigation">
-      <nav>
-        <ul>
-          <li>
-            <Link onClick={toggle} to="/">
-              ΑΡΧΙΚΗ
-            </Link>
-          </li>
-          <li>
-            <Link onClick={toggle} to="/blog">
-              BLOG
-            </Link>
-          </li>
-          <li>
-            <Link onClick={toggle} to="/about">
-              ABOUT
-            </Link>
-          </li>
-          <li>
-            <Link onClick={toggle} to="/contact">
-              CONTACT
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="wave">
-        <img src={wave} alt="wave" />
+    <div className="overlay">
+      <div className="navigation">
+        <nav>
+          <ul>
+            <li>
+              <Link onClick={toggle} to="/">
+                ΑΡΧΙΚΗ
+              </Link>
+            </li>
+            <li>
+              <Link onClick={toggle} to="/blog">
+                BLOG
+              </Link>
+            </li>
+            <li>
+              <Link onClick={toggle} to="/about">
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link onClick={toggle} to="/contact">
+                CONTACT
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className="wave">
+          <img src={wave} alt="wave" />
+        </div>
+        <img className="site-logo" src={logo} alt="logo" />
+        <button type="button" onClick={toggle} className="close">
+          Close
+        </button>
       </div>
-      <img className="site-logo" src={logo} alt="logo" />
-      <button type="button" onClick={toggle} className="close">
-        Close
-      </button>
     </div>
   );
 };

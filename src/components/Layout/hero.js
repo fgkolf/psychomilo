@@ -1,5 +1,6 @@
 import React from 'react';
 import Share from '../BlogPost/share';
+import ScheduleAppointment from './schedule-appointment';
 import logo from '../../../static/images/logo.svg';
 
 const Hero = ({ data }) => (
@@ -15,7 +16,7 @@ const Hero = ({ data }) => (
       <p>{data.shortBio.shortBio}</p>
       <hr />
       <Share url="/" title="the title" />
-      <button type="button">SCHEDULE AN APPOINTMENT</button>
+      <ScheduleAppointment />
     </div>
   </div>
 );

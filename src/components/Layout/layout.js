@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
         <Navigation />
         <Hero data={hero} />
       </aside>
-      <div>{children}</div>
+      <div className="transition-fade-in">{children}</div>
       <BackToTop />
     </div>
   );

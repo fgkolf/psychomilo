@@ -29,7 +29,7 @@ const Navigation = () => {
     );
   }
   return (
-    <div className="overlay">
+    <div className="overlay transition-slide-right">
       <div className="navigation">
         <nav>
           <ul>

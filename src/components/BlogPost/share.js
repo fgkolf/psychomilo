@@ -6,25 +6,23 @@ import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 're
 import styles from './share.module.css';
 
 const Share = ({ url, title }) => (
-  <div>
-    <ul className={styles.shareIcons}>
-      <li>
-        <FacebookShareButton url={url} className={[styles.shareIcon, styles.facebook]}>
-          <FontAwesomeIcon size="sm" icon={faFacebookF} />
-        </FacebookShareButton>
-      </li>
-      <li>
-        <TwitterShareButton url={url} className={[styles.shareIcon, styles.twitter]} title={title}>
-          <FontAwesomeIcon size="sm" icon={faTwitter} />
-        </TwitterShareButton>
-      </li>
-      <li>
-        <LinkedinShareButton url={url} className={[styles.shareIcon, styles.linkedin]} title={title}>
-          <FontAwesomeIcon size="sm" icon={faLinkedinIn} />
-        </LinkedinShareButton>
-      </li>
-    </ul>
-  </div>
+  <ul className={styles.shareIcons}>
+    <li>
+      <FacebookShareButton url={url} className={[styles.shareIcon, styles.facebook]}>
+        <FontAwesomeIcon size="sm" icon={faFacebookF} />
+      </FacebookShareButton>
+    </li>
+    <li>
+      <TwitterShareButton url={url} className={[styles.shareIcon, styles.twitter]} title={title}>
+        <FontAwesomeIcon size="sm" icon={faTwitter} />
+      </TwitterShareButton>
+    </li>
+    <li>
+      <LinkedinShareButton url={url} className={[styles.shareIcon, styles.linkedin]} title={title}>
+        <FontAwesomeIcon size="sm" icon={faLinkedinIn} />
+      </LinkedinShareButton>
+    </li>
+  </ul>
 );
 
 export default Share;

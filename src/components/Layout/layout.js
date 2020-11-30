@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Navigation from './navigation';
 import BackToTop from './back-to-top';
@@ -21,13 +21,18 @@ const useHero = () => {
 };
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    document.querySelector('html').style.overflowY = 'visible';
+  }, []);
+
   const hero = useHero();
+
   return (
     <div className="wrapper">
-      <aside>
+      <div className="hero">
         <Navigation />
         <Hero data={hero} />
-      </aside>
+      </div>
       <div className="transition-fade-in">{children}</div>
       <BackToTop />
     </div>

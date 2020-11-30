@@ -11,7 +11,6 @@
 @import "components/blog-post-list";
 @import "components/blog";
 @import "components/about";
-@import "components/burger";
 @import "components/navigation";
 @import "components/contact";
 
@@ -34,15 +33,12 @@ body {
 
   @media (max-width: $bp-tablet) {
     grid-template-columns: 1fr;
-    margin: 1% 4.5% 1% 1.75%;
-
-    aside {
-      display: none;
-    }
+    grid-gap: 2%;
+    margin: 1% 1.75% 1% 1.75%;
   }
 
   @media (max-width: $bp-mobile) {
-    margin: 0;
+    margin: 1%;
   }
 }
 
@@ -67,8 +63,9 @@ img {
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 9;
   background-color: $color-brand;
+  opacity: 1;
 
   .close {
     position: absolute;
@@ -79,6 +76,7 @@ img {
     font-size: 0;
     cursor: pointer;
     background: none;
+    z-index: 10;
   }
   .close:hover {
     opacity: 0.3;

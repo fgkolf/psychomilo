@@ -1,5 +1,6 @@
-aside {
+.hero {
   .hero-image {
+    border-radius: 0;
     width: 85px;
     height: 75px;
   }
@@ -33,5 +34,54 @@ aside {
       cursor: pointer;
       font-weight: bold;
     }
+  }
+
+  @media (max-width: $bp-tablet) {
+      position: sticky;
+      top: 0;
+      padding: 10px 0 10px 0;
+      background-color: white;
+      display: inline-flex;
+      justify-content: space-between;
+      z-index: 5;
+
+      .hero-image {
+        max-height: 35px;
+        width: auto;
+        order: 3;
+      }
+
+      .hero-details {
+        margin: 0;
+        order: 2;
+
+        p {
+          width: auto;
+          text-align: center;
+        }
+
+        .secondary-details {
+          display: none;
+        }
+
+        .hero-actions {
+          display: none;
+        }
+      }
+  }
+}
+
+.burger {
+  outline: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 7px;
+    background: $color-brand;
+    border-radius: 3px;
+    z-index: 1;
   }
 }

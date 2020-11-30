@@ -1,20 +1,5 @@
 /* Animations
 /* ---------------------------------------------------------- */
-.transition-fade {
-    transition: 0.25s;
-    animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-    transform: translate3d(-100vh, 4vh, 0);
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translate3d(4vh, 4vh, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 .transition-fade-in {
   transition: 1s;
   animation: fadeIn 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
@@ -30,26 +15,20 @@
   }
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .transition-slide-right {
   transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
   animation: slideRight 0.25s ease-out forwards;
-  -webkit-animation: slideRight 0.25s ease-out forwards;
 }
 
 @keyframes slideRight {
   100% { transform: translateX(0%); }
 }
 
-@-webkit-keyframes slideRight {
-  100% { -webkit-transform: translateX(0%); }
+.transition-slide-left {
+  transform: translateX(0%);
+  animation: slideLeft 0.25s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  100% { transform: translateX(-100%); }
 }

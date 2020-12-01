@@ -20,34 +20,12 @@
 		}
 	}
 
-	.wave {
-		position: absolute;
-		right: 0;
-		top: 0;
-		height: 100%;
-		width: 15%;
-		border-right: 2vw solid $color-white; // use this to fills the gaps behind svg
-
-		img {
-			width: auto;
-			height: 100%;
-		}
-
-		@media (max-width: $bp-desktop) {
-			width: 16%;
-			border-right: none // remove gap to avoid seeing flat border
-		}
-	}
-
 	.site-logo {
+		filter: brightness(0) invert(1);
 		position: fixed;
 		right: 2vh;
 		bottom: 2vh;
 		width: 86px;
 		height: 75px;
-
-		@media (max-width: $bp-desktop-large) {
-			display: none;
-		}
 	}
 }

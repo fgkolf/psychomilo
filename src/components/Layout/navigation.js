@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import wave from '../../../static/images/wave.svg';
 import logo from '../../../static/images/logo.svg';
 import Overlay from '../overlay';
 
@@ -9,6 +8,11 @@ const Navigation = () => {
 
   const toggle = () => {
     setShowNav((prevShow) => !prevShow);
+  };
+
+  const navigate = () => {
+    toggle();
+    document.querySelector('html').style.overflowY = 'visible';
   };
 
   return (
@@ -23,30 +27,27 @@ const Navigation = () => {
           <nav>
             <ul>
               <li>
-                <Link onClick={toggle} to="/">
+                <Link onClick={navigate} to="/">
                   ΑΡΧΙΚΗ
                 </Link>
               </li>
               <li>
-                <Link onClick={toggle} to="/blog">
+                <Link onClick={navigate} to="/blog">
                   BLOG
                 </Link>
               </li>
               <li>
-                <Link onClick={toggle} to="/about">
+                <Link onClick={navigate} to="/about">
                   ABOUT
                 </Link>
               </li>
               <li>
-                <Link onClick={toggle} to="/contact">
+                <Link onClick={navigate} to="/contact">
                   CONTACT
                 </Link>
               </li>
             </ul>
           </nav>
-          <div className="wave">
-            <img src={wave} alt="wave" />
-          </div>
           <img className="site-logo" src={logo} alt="logo" />
         </div>
       </Overlay>

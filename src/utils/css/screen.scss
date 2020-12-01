@@ -65,7 +65,6 @@ img {
   top: 0;
   z-index: 9;
   background-color: $color-brand;
-  opacity: 1;
 
   .close {
     position: absolute;
@@ -86,7 +85,7 @@ img {
     content: ' ';
     height: 33px;
     width: 3px;
-    background-color: $color-brand-dark;
+    background-color: $color-white;
     border-radius: 20px;
   }
   .close::before {

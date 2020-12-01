@@ -7,16 +7,12 @@ const Overlay = ({ visible, toggle, children }) => {
 
   useEffect(() => {
     const html = document.querySelector('html');
-    if (!inner) {
+    if (inner) {
+      html.style.overflowY = 'hidden';
+    } else {
       html.style.overflowY = 'visible';
+      setTimeout(toggle, 250);
     }
-    setTimeout(() => {
-      if (inner) {
-        html.style.overflowY = 'hidden';
-      } else {
-        toggle();
-      }
-    }, 250);
   }, [inner]);
 
   return (

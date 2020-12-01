@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Navigation from './navigation';
 import BackToTop from './back-to-top';
@@ -21,12 +21,7 @@ const useHero = () => {
 };
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    document.querySelector('html').style.overflowY = 'visible';
-  }, []);
-
   const hero = useHero();
-
   return (
     <div className="wrapper">
       <div className="hero">

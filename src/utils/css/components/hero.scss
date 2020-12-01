@@ -84,4 +84,10 @@
     border-radius: 3px;
     z-index: 1;
   }
+
+  @media (min-width: $bp-tablet) {
+    position: fixed;
+    top: 1vh;
+    left: 1vh;
+  }
 }

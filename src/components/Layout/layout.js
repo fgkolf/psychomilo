@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
       </div>
       <div className="transition-fade-in">{children}</div>
       <BackToTop />
+      <footer>psychomilo 2020</footer>
     </div>
   );
 };

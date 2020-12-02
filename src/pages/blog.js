@@ -38,10 +38,8 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid
             }
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
+          childContentfulBlogPostBodyTextNode {
+            body
           }
         }
       }

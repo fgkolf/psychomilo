@@ -13,6 +13,8 @@
 @import "components/about";
 @import "components/navigation";
 @import "components/contact";
+@import "components/scheduler";
+@import "components/back-to-top";
 
 body {
   font-family: "Zona Pro", Arial, serif;
@@ -96,4 +98,13 @@ img {
   .close::after {
     transform: rotate(-45deg);
   }
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }

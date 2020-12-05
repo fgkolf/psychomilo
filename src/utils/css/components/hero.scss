@@ -25,7 +25,7 @@
       margin: 25px 0;
     }
 
-    button {
+    .schedule-btn {
       margin-top: 25px;
       background-color: $color-brand;
       border-radius: 20px;
@@ -33,6 +33,10 @@
       padding: 12px;
       cursor: pointer;
       font-weight: bold;
+
+      .fa-calendar {
+        display: none;
+      }
     }
   }
 
@@ -65,7 +69,60 @@
         }
 
         .hero-actions {
-          display: none;
+          ul {
+            display: none;
+          }
+
+          .schedule-btn {
+            position: fixed;
+            width: 45px;
+            height: 45px;
+            bottom: 20px;
+            right: 20px;
+            margin: 0;
+            border-radius: 50%;
+            border: 2px solid rgba(1,1,1,0.7);
+            font-size: 0;
+
+            .fa-calendar {
+              height: 100%;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          /* Animations */
+          .btn-entrance1 {
+            animation-duration: 0.5s;
+            animation-fill-mode: both;
+            animation-name: btnEntrance1;
+          }
+
+          /* fadeInUp */
+          @keyframes btnEntrance1 {
+            from {
+              transform: translate3d(0, 0, 0);
+            }
+            to {
+              transform: translate3d(0, -120%, 0);
+            }
+          }
+
+          .btn-exit1 {
+            animation-duration: 0.25s;
+            animation-fill-mode: both;
+            animation-name: btnExit1;
+          }
+
+          /* fadeOutDown */
+          @keyframes btnExit1 {
+            from {
+              transform: translate3d(0, -100%, 0);
+            }
+            to {
+              transform: translate3d(0, 0, 0);
+            }
+          }
         }
       }
   }

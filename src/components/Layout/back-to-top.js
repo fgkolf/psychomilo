@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
-import './back-to-top.css';
-
 function easeInOutCubic(t, b, c, d) {
   t /= d / 2;
   if (t < 1) return (c / 2) * t * t * t + b;
@@ -33,12 +31,16 @@ function scrollFunction(backToTopButton) {
   if (window.pageYOffset > 300) {
     if (!backToTopButton.classList.contains('btn-entrance')) {
       backToTopButton.classList.remove('btn-exit');
+      document.querySelector('.schedule-btn').classList.remove('btn-exit1');
       backToTopButton.classList.add('btn-entrance');
       backToTopButton.style.display = 'block';
+      document.querySelector('.schedule-btn').classList.add('btn-entrance1');
     }
   } else if (backToTopButton.classList.contains('btn-entrance')) {
     backToTopButton.classList.remove('btn-entrance');
+    document.querySelector('.schedule-btn').classList.remove('btn-entrance1');
     backToTopButton.classList.add('btn-exit');
+    document.querySelector('.schedule-btn').classList.add('btn-exit1');
     setTimeout(function () {
       backToTopButton.style.display = 'none';
     }, 250);

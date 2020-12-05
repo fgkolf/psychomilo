@@ -2,9 +2,15 @@
    Base styles: opinionated defaults
    ========================================================================== */
 html, body {
-    max-width: 100%;
     overflow-x: initial;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    max-width: 100%;
     margin: 0;
+    padding-bottom: 6rem;
 }
 
 div {
@@ -31,6 +37,14 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 h1 {

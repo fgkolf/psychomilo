@@ -1,5 +1,5 @@
 article {
-	margin-top: 3em;
+	margin-top: 3rem;
 
 	.title {
 		margin: 0
@@ -10,6 +10,7 @@ article {
 	}
 
 	@media (max-width: $bp-tablet) {
+		margin-top: 1rem;
 		width: 100%;
 	}
 }

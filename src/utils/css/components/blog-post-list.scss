@@ -44,6 +44,10 @@
 				padding: 0;
 				color: $color-gray-dark;
 				text-decoration: none;
+
+				:hover {
+					color: $color-black;
+				}
 			}
 		}
 	}
@@ -51,6 +55,24 @@
 	.blog-post-node:hover {
 		img {
 			transform: scale(1.1);
+		}
+	}
+}
+
+@media (max-width: $bp-mobile) {
+	.blog-post-list {
+		display: grid;
+
+		.blog-post-node {
+			display: grid;
+			grid-gap: 10px;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1.5fr;
+			height: 390px;
+
+			.subtitle {
+				margin: 5px 0;
+			}
 		}
 	}
 }

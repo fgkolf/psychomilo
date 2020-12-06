@@ -33,6 +33,11 @@
       padding: 12px;
       cursor: pointer;
       font-weight: bold;
+      transition: $common-transition;
+
+      &:hover {
+        background-color: $color-brand-dark;
+      }
 
       .fa-calendar {
         display: none;
@@ -140,6 +145,13 @@
     background: $color-brand;
     border-radius: 3px;
     z-index: 1;
+    transition: $common-transition;
+  }
+
+  &:hover {
+    span {
+      background-color: $color-brand-dark;
+    }
   }
 
   @media (min-width: $bp-tablet) {

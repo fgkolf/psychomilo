@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
-import Share from '../components/BlogPost/share';
+import Share from '../components/share';
 import useSiteUrl from '../utils/helpers/useSiteUrl';
 
 const BlogPostTemplate = ({ data }) => {
@@ -29,7 +29,9 @@ const BlogPostTemplate = ({ data }) => {
               __html: post.body.childMarkdownRemark.html,
             }}
           />
-          <Share url={socialUrl} title={post.title} />
+          <div className="share-section">
+            <Share url={socialUrl} title={post.title} />
+          </div>
         </article>
       </div>
     </Layout>

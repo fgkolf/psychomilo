@@ -14,6 +14,7 @@
 @import "components/navigation";
 @import "components/contact";
 @import "components/scheduler";
+@import "components/share";
 @import "components/back-to-top";
 
 body {
@@ -72,31 +73,37 @@ img {
 
   .close {
     position: absolute;
+    top: 2vh;
     right: 2vh;
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     opacity: 1;
     font-size: 0;
     cursor: pointer;
     background: none;
     z-index: 10;
   }
-  .close:hover {
-    opacity: 0.3;
-  }
+
   .close::before, .close::after {
     position: absolute;
+    left: 25px;
+    bottom: 0;
     content: ' ';
-    height: 33px;
-    width: 3px;
+    height: 50px;
+    width: 4px;
     background-color: $color-white;
     border-radius: 20px;
+    transition: $common-transition;
   }
   .close::before {
     transform: rotate(45deg);
   }
   .close::after {
     transform: rotate(-45deg);
+  }
+
+  .close:hover::before, .close:hover::after {
+    background-color: $color-brand-dark;
   }
 }
 

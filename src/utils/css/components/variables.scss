@@ -4,6 +4,8 @@ $color-gray: #B3B3B3;
 $color-gray-dark: #666666;
 $color-brand: #2DAA96;
 $color-brand-dark: #107262;
+$color-error: #D54141;
+$color-success: #50b64a;
 
 $font-size-small: 0.67rem;
 $font-size-medium: 1rem;
@@ -13,3 +15,5 @@ $bp-mobile: 576px;
 $bp-tablet: 768px;
 $bp-desktop: 992px;
 $bp-desktop-large: 1366px;
+
+$common-transition: all 0.3s ease

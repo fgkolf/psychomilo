@@ -38,7 +38,7 @@
 		}
 
 		.error {
-			border-color: #D54141 !important;
+			border-color: $color-error !important;
 		}
 
 		.error-msg {
@@ -46,7 +46,7 @@
 			margin-top: 6px;
 			font-size: $font-size-small;
 			display: block;
-			color: #D54141;
+			color: $color-error;
 		}
 
 		.button-area {
@@ -60,6 +60,7 @@
 				padding: 8px 16px;
 				color: $color-brand;
 				font-weight: bold;
+				transition: $common-transition;
 			}
 
 			button:hover {
@@ -68,11 +69,11 @@
 			}
 
 			.notification-success {
-				color: green;
+				color: $color-success;
 			}
 
 			.notification-error {
-				color: firebrick;
+				color: $color-error;
 			}
 		}
 	}

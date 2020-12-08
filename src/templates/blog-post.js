@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
 import Share from '../components/share';
@@ -12,8 +11,7 @@ const BlogPostTemplate = ({ data }) => {
   const socialUrl = `${url}/blog/${post.slug}`;
 
   return (
-    <Layout>
-      <Helmet title={post.title} />
+    <Layout title={post.title}>
       <div>
         <Img
           style={{ maxHeight: 'calc(35vh - 5rem)', minHeight: '200px' }}

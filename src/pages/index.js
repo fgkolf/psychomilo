@@ -1,18 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import Layout from '../components/Layout/layout';
 import BlogPostPreview from '../components/blog-post-preview';
-import useSiteTitle from '../utils/helpers/useSiteTitle';
 
 import '../utils/css/screen.scss';
 
 const RootIndex = ({ data }) => {
-  const siteTitle = useSiteTitle();
   const posts = data.allContentfulBlogPost.edges;
   return (
     <Layout>
-      <Helmet title={siteTitle} />
       <div>
         <ul className="blog-post-list">
           {posts.map(({ node }) => (

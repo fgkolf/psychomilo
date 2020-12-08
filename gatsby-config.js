@@ -21,6 +21,11 @@ module.exports = {
   siteMetadata: {
     title: `psychomilo`,
     url: 'https://psychomilo.netlify.com', // for share in share component
+    social: {
+      facebook: 'https://www.facebook.com',
+      linkedin: 'https://www.linkedin.com/',
+      instagram: 'https://www.instagram.com/',
+    },
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [

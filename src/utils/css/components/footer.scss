@@ -1,0 +1,17 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.social {
+		display: none;
+	}
+
+	@media (max-width: $bp-tablet) {
+		.social {
+			display: block;
+		}
+	}
+}
+

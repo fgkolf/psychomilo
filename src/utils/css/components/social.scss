@@ -1,9 +1,9 @@
-.share-icons li {
+.social li {
   display: inline;
   float: left;
 }
 
-.share-icon {
+.social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,5 +45,13 @@
 
   &:hover {
     color: #C13584 !important;
+  }
+}
+
+.twitter {
+  background-color: #00ACEE !important;
+
+  &:hover {
+    color: #00ACEE !important;
   }
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import logo from '../../../static/images/logo.svg';
-import useSiteUrl from '../../utils/helpers/useSiteUrl';
-import useSiteTitle from '../../utils/helpers/useSiteTitle';
 import ScheduleAppointment from './schedule-appointment';
-import Share from '../share';
+import Social from './social';
 
 const useHero = () => {
   const data = useStaticQuery(graphql`
@@ -24,8 +22,6 @@ const useHero = () => {
 
 const Hero = () => {
   const hero = useHero();
-  const siteUrl = useSiteUrl();
-  const siteTitle = useSiteTitle();
   return (
     <>
       <img src={logo} alt={hero.name} className="hero-image" />
@@ -43,7 +39,7 @@ const Hero = () => {
           <hr />
         </div>
         <div className="hero-actions">
-          <Share url={siteUrl} title={siteTitle} />
+          <Social />
           <ScheduleAppointment />
         </div>
       </div>

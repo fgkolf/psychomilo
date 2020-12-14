@@ -11,12 +11,12 @@ const Overlay = ({ visible, toggle, children }) => {
       html.style.overflowY = 'hidden';
     } else {
       html.style.overflowY = 'visible';
-      setTimeout(toggle, 250);
+      setTimeout(toggle, 400);
     }
   }, [inner]);
 
   return (
-    <div className={`overlay  ${inner ? 'transition-slide-right' : 'transition-slide-left'}`}>
+    <div className={`overlay ${inner ? 'slide-right' : 'slide-left'}`}>
       <button type="button" onClick={() => setInner(false)} className="close">
         Close
       </button>

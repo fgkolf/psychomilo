@@ -58,6 +58,12 @@
         max-height: 35px;
         width: auto;
         order: 3;
+        transition: filter 0.4s;
+
+        &.white {
+          z-index: 10;
+          filter: brightness(0) invert(1);
+        }
       }
 
       .hero-details {

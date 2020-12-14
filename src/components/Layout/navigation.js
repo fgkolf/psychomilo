@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import logo from '../../../static/images/logo.svg';
+import animateHeroImage from '../../utils/helpers/animateHeroImage';
 import Overlay from '../overlay';
 
 const Navigation = () => {
   const [showNav, setShowNav] = useState(false);
 
   const toggle = () => {
+    animateHeroImage();
     setShowNav((prevShow) => !prevShow);
   };
 
@@ -48,7 +49,6 @@ const Navigation = () => {
               </li>
             </ul>
           </nav>
-          <img className="site-logo" src={logo} alt="logo" />
         </div>
       </Overlay>
     </div>

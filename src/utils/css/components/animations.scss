@@ -1,6 +1,6 @@
 /* Animations
 /* ---------------------------------------------------------- */
-.transition-fade-in {
+.fade-in {
   transition: 1s;
   animation: fadeIn 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
   opacity: 0.5;
@@ -15,18 +15,19 @@
   }
 }
 
-.transition-slide-right {
+.slide-right {
+  opacity: 0.5;
   transform: translateX(-100%);
-  animation: slideRight 0.25s ease-out forwards;
+  animation: slideRight 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 @keyframes slideRight {
-  100% { transform: translateX(0%); }
+  100% { opacity: 1; transform: translateX(0%); }
 }
 
-.transition-slide-left {
+.slide-left {
   transform: translateX(0%);
-  animation: slideLeft 0.25s ease-out forwards;
+  animation: slideLeft 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
 
 @keyframes slideLeft {

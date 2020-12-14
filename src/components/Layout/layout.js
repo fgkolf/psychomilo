@@ -12,7 +12,7 @@ const Layout = ({ children, title }) => (
       <Navigation />
       <Hero />
     </div>
-    <div className="content transition-fade-in">{children}</div>
+    <div className="content fade-in">{children}</div>
     <Footer />
     <BackToTop />
   </div>

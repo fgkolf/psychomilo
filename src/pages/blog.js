@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout/layout';
+import Layout from '../components/Layout';
 import BlogPostPreview from '../components/blog-post-preview';
 
 const BlogIndex = ({ data }) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout/layout';
+import Layout from '../components/Layout';
 
 const part1 =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend magna eget ante sollicitudin, eu molestie mauris venenatis. Quisque dui felis, varius tincidunt finibus at, blandit eget metus.';

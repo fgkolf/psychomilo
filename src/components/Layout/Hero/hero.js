@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import logo from '../../../static/images/logo.svg';
+import logo from '../../../../static/images/logo.svg';
 import ScheduleAppointment from './schedule-appointment';
 import Social from './social';
 

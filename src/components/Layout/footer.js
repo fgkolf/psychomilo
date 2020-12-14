@@ -1,5 +1,5 @@
 import React from 'react';
-import Social from './social';
+import Social from './Hero/social';
 
 const Footer = () => (
   <footer>

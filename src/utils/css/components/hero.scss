@@ -138,31 +138,3 @@
       }
   }
 }
-
-.burger {
-  outline: none;
-  cursor: pointer;
-
-  span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    margin-bottom: 7px;
-    background: $color-brand;
-    border-radius: 3px;
-    z-index: 1;
-    transition: $common-transition;
-  }
-
-  &:hover {
-    span {
-      background-color: $color-brand-dark;
-    }
-  }
-
-  @media (min-width: $bp-tablet) {
-    position: fixed;
-    top: 1vh;
-    left: 1vh;
-  }
-}

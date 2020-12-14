@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Layout from '../components/Layout/layout';
+import Layout from '../components/Layout';
 import Share from '../components/share';
 import useSiteUrl from '../utils/helpers/useSiteUrl';
 

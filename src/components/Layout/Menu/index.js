@@ -4,6 +4,7 @@ import animateHeroImage from '../../../utils/helpers/animateHeroImage';
 import Overlay from './overlay';
 import Burger from './burger';
 import { OverlayContext } from './overlay-store';
+import ContactForm from '../../Contact/contact-form';
 
 const Navigation = () => {
   const { overlay, setOverlay } = useContext(OverlayContext);
@@ -70,15 +71,7 @@ const Navigation = () => {
         {overlay.flavor === 'scheduler' && (
           <div className="scheduler">
             <h1>Κλείσε ραντεβού</h1>
-            <form>
-              <input type="text" name="name" placeholder="Όνομα" onChange={() => {}} />
-              <input type="text" name="name" placeholder="Email" onChange={() => {}} />
-              <input type="text" name="name" placeholder="Date" onChange={() => {}} />
-              <input type="text" name="name" placeholder="Time" onChange={() => {}} />
-              <div className="button-area">
-                <button type="button">CONFIRM</button>
-              </div>
-            </form>
+            <ContactForm fromScheduler />
           </div>
         )}
       </Overlay>

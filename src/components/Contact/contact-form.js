@@ -105,24 +105,22 @@ const ContactForm = ({ fromScheduler }) => {
         />
         {errors.email && <span className="error-msg">{errors.email}</span>}
       </div>
-      {fromScheduler && (
-        <div>
-          <Datetime
-            value={formValues.date}
-            locale="el"
-            onChange={handleDateChange}
-            timeFormat="HH:mm"
-            initialViewDate={moment().set({ hour: 9, minute: 0 })}
-            inputProps={{
-              name: 'date',
-              placeholder: 'Ημερομηνία / Ώρα',
-              className: errors.date && 'error',
-              autoComplete: 'off',
-            }}
-          />
-          {errors.date && <span className="error-msg">{errors.date}</span>}
-        </div>
-      )}
+      <div className="date-input">
+        <Datetime
+          value={formValues.date}
+          locale="el"
+          onChange={handleDateChange}
+          timeFormat="HH:mm"
+          initialViewDate={moment().set({ hour: 9, minute: 0 })}
+          inputProps={{
+            name: 'date',
+            placeholder: 'Ημερομηνία / Ώρα',
+            className: errors.date && 'error',
+            autoComplete: 'off',
+          }}
+        />
+        {errors.date && <span className="error-msg">{errors.date}</span>}
+      </div>
       <div>
         <textarea
           name="message"

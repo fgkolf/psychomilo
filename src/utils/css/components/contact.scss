@@ -28,13 +28,17 @@
 		}
 
 		textarea {
+			font-weight: bold;
 			font-size: $font-size-medium * 0.9;
 		}
 
 		::placeholder {
 			font-weight: bold;
-			font-size: $font-size-medium;
 			color: $color-gray;
+		}
+
+		input::placeholder {
+			font-size: $font-size-medium;
 		}
 
 		.error {

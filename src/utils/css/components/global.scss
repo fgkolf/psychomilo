@@ -58,3 +58,7 @@ h2 {
 h3 {
     font-size: $font-size-big*0.7;
 }
+
+input, button, textarea, ::placeholder {
+    font-family: inherit;
+}

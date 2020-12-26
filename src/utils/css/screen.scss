@@ -18,14 +18,11 @@
 @import "components/back-to-top";
 @import "components/footer";
 @import "components/burger";
+@import "components/filters";
 
-body {
+html, body {
   font-family: "Zona Pro", Arial, serif;
   font-size: $font-size-medium;
-
-  ::placeholder {
-    font-family: "Zona Pro", Arial, serif;
-  }
 }
 
 .wrapper {

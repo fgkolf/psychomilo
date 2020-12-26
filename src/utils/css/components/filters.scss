@@ -1,0 +1,46 @@
+.filters {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 25px;
+
+	.recent-order {
+		svg {
+			vertical-align: -0.2em;
+			transition: $common-transition;
+
+			&.ascending {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	button {
+		border: 2px $color-brand-dark solid;
+		padding: 8px;
+		border-radius: 20px;
+		transition: $common-transition;
+		background-color: $color-white;
+		color: $color-brand-dark;
+		font-size: $font-size-small;
+	}
+
+	button:hover {
+		background-color: darken($color-white, 5%);
+	}
+
+	li {
+		button.active {
+			color: $color-white;
+			background-color: $color-brand-dark;
+
+			&::after {
+				content: ' | x';
+			}
+		}
+
+		button.active:hover {
+			background-color: darken($color-brand-dark, 5%);;
+		}
+	}
+}

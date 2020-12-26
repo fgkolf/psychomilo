@@ -5,6 +5,7 @@ import Overlay from './overlay';
 import Burger from './burger';
 import { OverlayContext } from './overlay-store';
 import ContactForm from '../../Contact/contact-form';
+import ensureScrollActive from '../../../utils/helpers/ensureScrollActive';
 
 const Navigation = () => {
   const { overlay, setOverlay } = useContext(OverlayContext);
@@ -33,7 +34,7 @@ const Navigation = () => {
 
   const navigate = () => {
     toggle({ target: { checked: false } });
-    document.querySelector('html').style.overflowY = 'visible';
+    ensureScrollActive();
   };
 
   return (

@@ -54,15 +54,18 @@
       justify-content: space-between;
       z-index: 5;
 
-      .hero-image {
-        max-height: 35px;
-        width: auto;
+      .hero-image-link {
         order: 3;
-        transition: filter 0.4s;
+        z-index: 10;
 
-        &.white {
-          z-index: 10;
-          filter: brightness(0) invert(1);
+        .hero-image {
+          max-height: 35px;
+          width: auto;
+          transition: filter 0.4s;
+
+          &.white {
+            filter: brightness(0) invert(1);
+          }
         }
       }
 
@@ -92,7 +95,7 @@
             right: 20px;
             margin: 0;
             border-radius: 50%;
-            border: 2px solid rgba(1,1,1,0.7);
+            box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
             font-size: 0;
 
             .fa-calendar {

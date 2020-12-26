@@ -6,11 +6,11 @@
   font-size: 15px;
   width: 40px;
   height: 40px;
-  background-color: rgba(45, 169, 149, 0.52);
+  background-color: lighten($color-brand, 40%);
   color: rgba(1,1,1,0.7);
   cursor: pointer;
   outline: none;
-  border: 2px solid rgba(1,1,1,0.7);
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;

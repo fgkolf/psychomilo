@@ -10,6 +10,11 @@ const BlogPostTemplate = ({ data }) => {
   const url = useSiteUrl();
   const socialUrl = `${url}/blog/${post.slug}`;
 
+  let subtitle = `${post.publishDate.toUpperCase()}`;
+  if (post.tags) {
+    subtitle += ` | ${post.tags.join(', ').toUpperCase()}`;
+  }
+
   return (
     <Layout title={post.title}>
       <div>
@@ -20,7 +25,7 @@ const BlogPostTemplate = ({ data }) => {
         />
         <article>
           <h1 className="title">{post.title}</h1>
-          <p className="subtitle">{`${post.publishDate.toUpperCase()} | CATEGORY`}</p>
+          <p className="subtitle">{subtitle}</p>
           <div
             className="blog-post-body"
             dangerouslySetInnerHTML={{
@@ -42,6 +47,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      tags
       publishDate(formatString: "DD MMMM YYYY")
       heroImage {
         fluid {

@@ -1,6 +1,6 @@
 .navigation {
 	height: 100%;
-	padding-left: 50px;
+	padding-left: 10%;
 	padding-bottom: 50px;
 	display: flex;
 	align-items: center;
@@ -25,8 +25,16 @@
 	}
 
 	@media (max-width: $bp-mobile) {
-		padding-left: 20px;
+		nav {
+			li {
+				a {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
 
+	@media (max-height: 720px) and (orientation: landscape) {
 		nav {
 			li {
 				a {

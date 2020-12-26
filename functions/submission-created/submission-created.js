@@ -25,14 +25,11 @@ exports.handler = async (event) => {
     from: FROM_EMAIL_ADDRESS,
     to: CONTACT_TO_EMAIL_ADDRESS,
     'h:Reply-To': email,
-    subject: `New contact from ${name}`,
-    text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
+    subject: date ? `New schedule request from ${name}` : `New contact from ${name}`,
+    text: date
+      ? `Name: ${name} \nEmail: ${email} \nDate: ${date} \nMessage: ${message}`
+      : `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
   };
-
-  if (date) {
-    mailgunData.subject = `New schedule request from ${name}`;
-    mailgunData.text = `Name: ${name} \nEmail: ${email} \nDate: ${date} \nMessage: ${message}`;
-  }
 
   return mailgun
     .messages()

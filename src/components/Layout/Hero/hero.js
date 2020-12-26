@@ -1,6 +1,7 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import logo from '../../../../static/images/logo.svg';
+import ensureScrollActive from '../../../utils/helpers/ensureScrollActive';
 import ScheduleAppointment from './schedule-appointment';
 import Social from './social';
 
@@ -24,7 +25,9 @@ const Hero = () => {
   const hero = useHero();
   return (
     <>
-      <img src={logo} alt={hero.name} className="hero-image" />
+      <Link className="hero-image-link" to="/" onClick={ensureScrollActive}>
+        <img src={logo} alt={hero.name} className="hero-image" />
+      </Link>
       <div className="hero-details">
         <div className="primary-details">
           <p>

@@ -1,17 +1,24 @@
 footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: none;
+	padding: 10px;
+	background-color: $color-brand;
+	color: $color-white;
+	font-size: $font-size-small * 1.2;
+	width: 50%;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 
-	.social {
-		display: none;
+	p {
+		margin: 0;
+
+
+		a {
+			color: $color-brand-dark;
+		}
 	}
 
 	@media (max-width: $bp-tablet) {
-		.social {
-			display: block;
-		}
+		display: block;
 	}
 }
 

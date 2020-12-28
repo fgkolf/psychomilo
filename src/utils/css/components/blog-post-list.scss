@@ -25,6 +25,8 @@
 
 				position: relative;
 				overflow: hidden;
+				font-weight: 500;
+				font-size: 0.95rem;
 
 				&:after {
 					display: block;
@@ -44,6 +46,7 @@
 				padding: 0;
 				color: $color-gray-dark;
 				text-decoration: none;
+				font-size: 0.95rem;
 
 				:hover {
 					color: $color-black;
@@ -69,10 +72,6 @@
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr 1.5fr;
 			height: 390px;
-
-			.subtitle {
-				margin: 5px 0;
-			}
 		}
 	}
 }

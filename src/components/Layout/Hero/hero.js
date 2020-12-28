@@ -38,7 +38,13 @@ const Hero = () => {
         <div className="secondary-details">
           <p>{hero.company}</p>
           <hr />
-          <p>{hero.shortBio.shortBio}</p>
+          <div className="online">
+            <p>Πραγματοποιούνται ONLINE συνεδρίες.</p>
+            <p>
+              Για περισσότερες πληροφορίες
+              <Link to="/contact"> επικοινωνήστε μαζί μου</Link>
+            </p>
+          </div>
           <hr />
         </div>
         <div className="hero-actions">

@@ -41,7 +41,7 @@ const BlogPostPreview = ({ blogPost }) => {
           }}
         />
         <Link ref={readMoreRef} className="read-more" to={`/blog/${slug}`}>
-          <strong>Read more...</strong>
+          <strong>Διάβασε περισσότερα...</strong>
         </Link>
       </div>
     </li>

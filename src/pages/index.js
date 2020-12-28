@@ -4,12 +4,14 @@ import Layout from '../components/Layout';
 import BlogPostPreview from '../components/blog-post-preview';
 
 import '../utils/css/screen.scss';
+import Footer from '../components/Layout/footer';
 
 const RootIndex = ({ data }) => {
   const posts = data.allContentfulBlogPost.edges;
   return (
     <Layout>
       <div>
+        <Footer />
         <ul className="blog-post-list">
           {posts.map(({ node }) => (
             <BlogPostPreview key={node.slug} blogPost={node} />

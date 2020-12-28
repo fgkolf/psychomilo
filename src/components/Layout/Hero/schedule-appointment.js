@@ -12,7 +12,7 @@ const ScheduleAppointment = () => {
 
   return (
     <button className="schedule-btn" type="button" onClick={toggle}>
-      SCHEDULE AN APPOINTMENT
+      Κλείσε ραντεβού
       <FontAwesomeIcon size="lg" icon={faCalendar} />
     </button>
   );

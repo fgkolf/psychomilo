@@ -1,10 +1,15 @@
 import React from 'react';
-import Social from './Hero/social';
+import { Link } from 'gatsby';
 
 const Footer = () => (
   <footer>
-    <div>psychomilo 2020</div>
-    <Social />
+    <strong>
+      <p>Πραγματοποιούνται ONLINE συνεδρίες.</p>
+      <p>
+        Για περισσότερες πληροφορίες
+        <Link to="/contact"> επικοινωνήστε μαζί μου</Link>
+      </p>
+    </strong>
   </footer>
 );
 

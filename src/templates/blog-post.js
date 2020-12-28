@@ -34,6 +34,7 @@ const BlogPostTemplate = ({ data }) => {
           />
           <div className="share-section">
             <Share url={socialUrl} title={post.title} />
+            <hr />
           </div>
         </article>
       </div>

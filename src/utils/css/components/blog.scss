@@ -9,13 +9,23 @@ article {
 		margin-top: 1.5em;
 	}
 
+	.share-section {
+		display: flex;
+		align-items: center;
+
+		hr {
+			margin-left: 0.4rem;
+			width: 100%;
+			height: 1px;
+			border-radius: 10px;
+			border: 1px solid $color-brand;
+			background-color: $color-brand;
+		}
+	}
+
 	@media (max-width: $bp-tablet) {
 		margin-top: 1rem;
 		width: 100%;
 	}
 
-	.share-section {
-		display: flex;
-		justify-content: center;
-	}
 }

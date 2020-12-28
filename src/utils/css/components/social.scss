@@ -1,5 +1,9 @@
+.social {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
 .social li {
-  display: inline;
   float: left;
 }
 
@@ -7,10 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px !important;
-  height: 30px !important;
-  font-size: 1.2rem !important;
-  margin: 0.5rem !important;
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 1rem !important;
+  margin: 0.5rem 0.2rem !important;
   outline: none !important;
   color: $color-white !important;
   border-radius: 50% !important;

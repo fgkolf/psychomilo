@@ -1,10 +1,9 @@
 .navigation {
 	height: 100%;
-	padding-left: 10%;
-	padding-bottom: 50px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	text-align: center;
 
 	nav {
 		li {
@@ -13,13 +12,13 @@
 
 			a {
 				font-weight: bold;
-				font-size: 5rem;
+				font-size: 4rem;
 				color: inherit;
 				transition: $common-transition;
 			}
 
 			:hover {
-				color: $color-brand-dark;
+				color: $color-brand;
 			}
 		}
 	}

@@ -7,7 +7,7 @@
   width: 40px;
   height: 40px;
   background-color: lighten($color-brand, 40%);
-  color: rgba(1,1,1,0.7);
+  color: $color-brand-dark;
   cursor: pointer;
   outline: none;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.4);
@@ -19,7 +19,7 @@
 }
 
 .back-to-top-btn:hover {
-  background-color: rgb(45, 169, 149);
+  background-color: $color-brand;
 }
 
 @media(max-width: $bp-tablet) {

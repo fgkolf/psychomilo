@@ -39,7 +39,7 @@ const Hero = () => {
           <p>{hero.company}</p>
           <hr />
           <div className="online">
-            <p>Πραγματοποιούνται ONLINE συνεδρίες.</p>
+            <p>Πραγματοποιούνται online συνεδρίες.</p>
             <p>
               Για περισσότερες πληροφορίες
               <Link to="/contact"> επικοινωνήστε μαζί μου</Link>

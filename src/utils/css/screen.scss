@@ -80,6 +80,13 @@ img {
   z-index: 9;
   background-color: rgba(49, 50, 55, 0.9);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@supports not ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+  .overlay {
+    background-color: rgba(49, 50, 55, 0.95);
+  }
 }
 
 footer {

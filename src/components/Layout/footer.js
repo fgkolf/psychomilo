@@ -6,6 +6,16 @@ const Footer = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (
+      !('IntersectionObserver' in window) &&
+      !('IntersectionObserverEntry' in window) &&
+      !('intersectionRatio' in window.IntersectionObserverEntry.prototype)
+    ) {
+      // IE or any other browser without IntersectionObserver
+      setVisible(true);
+      return () => {};
+    }
+
     const intersectionObserver = new IntersectionObserver((entries) => {
       setVisible(entries[0].isIntersecting);
     });

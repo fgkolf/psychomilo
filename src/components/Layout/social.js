@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import useSocial from '../../../utils/helpers/useSocial';
+import useSocial from '../../utils/helpers/useSocial';
 
 const Social = () => {
   const { facebook, linkedin, instagram } = useSocial();

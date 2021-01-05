@@ -6,6 +6,7 @@ import Burger from './burger';
 import { OverlayContext } from './overlay-store';
 import ContactForm from '../../Contact/contact-form';
 import ensureScrollActive from '../../../utils/helpers/ensureScrollActive';
+import Social from '../social';
 
 const Navigation = () => {
   const { overlay, setOverlay } = useContext(OverlayContext);
@@ -44,7 +45,7 @@ const Navigation = () => {
         {overlay.flavor === 'navigation' && (
           <div className="navigation">
             <nav>
-              <ul>
+              <ul className="nav-list">
                 <li>
                   <Link onClick={navigate} to="/">
                     ΑΡΧΙΚΗ
@@ -66,6 +67,7 @@ const Navigation = () => {
                   </Link>
                 </li>
               </ul>
+              <Social />
             </nav>
           </div>
         )}

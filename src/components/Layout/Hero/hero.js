@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import logo from '../../../../static/images/logo.svg';
 import ensureScrollActive from '../../../utils/helpers/ensureScrollActive';
 import ScheduleAppointment from './schedule-appointment';
-import Social from './social';
+import Social from '../social';
 
 const useHero = () => {
   const data = useStaticQuery(graphql`

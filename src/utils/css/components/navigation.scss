@@ -6,28 +6,44 @@
 	text-align: center;
 
 	nav {
-		li {
-			margin: 26px;
-			color: $color-white;
+		.nav-list {
+			li {
+				margin: 26px;
+				color: $color-white;
 
-			a {
-				font-weight: bold;
-				font-size: 4rem;
-				color: inherit;
-				transition: $common-transition;
+				a {
+					font-weight: bold;
+					font-size: 4rem;
+					color: inherit;
+					transition: $common-transition;
+				}
+
+				:hover {
+					color: $color-brand;
+				}
 			}
+		}
 
-			:hover {
-				color: $color-brand;
+		.social {
+			display: none;
+		}
+	}
+
+	@media (max-width: $bp-tablet) {
+		nav {
+			.social {
+				display: inline-flex;
 			}
 		}
 	}
 
 	@media (max-width: $bp-mobile) {
 		nav {
-			li {
-				a {
-					font-size: 3rem;
+			.nav-list {
+				li {
+					a {
+						font-size: 3rem;
+					}
 				}
 			}
 		}
@@ -35,9 +51,11 @@
 
 	@media (max-height: 720px) and (orientation: landscape) {
 		nav {
-			li {
-				a {
-					font-size: 3rem;
+			.nav-list {
+				li {
+					a {
+						font-size: 3rem;
+					}
 				}
 			}
 		}

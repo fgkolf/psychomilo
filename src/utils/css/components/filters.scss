@@ -25,18 +25,18 @@
 		font-size: $font-size-small;
 	}
 
-	button:hover {
-		background-color: darken($color-white, 5%);
+	button.active {
+		color: $color-white;
+		background-color: $color-brand-dark;
+
+		&::after {
+			content: ' | x';
+		}
 	}
 
-	li {
-		button.active {
-			color: $color-white;
-			background-color: $color-brand-dark;
-
-			&::after {
-				content: ' | x';
-			}
+	@media (hover: hover) {
+		button:hover {
+			background-color: darken($color-white, 5%);
 		}
 
 		button.active:hover {

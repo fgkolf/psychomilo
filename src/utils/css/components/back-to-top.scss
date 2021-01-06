@@ -18,8 +18,10 @@
   z-index: 4;
 }
 
-.back-to-top-btn:hover {
-  background-color: $color-brand;
+@media (hover: hover) {
+  .back-to-top-btn:hover {
+    background-color: $color-brand;
+  }
 }
 
 @media(max-width: $bp-tablet) {

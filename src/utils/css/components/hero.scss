@@ -52,8 +52,10 @@
       transition: $common-transition;
       width: fit-content;
 
-      &:hover {
-        background-color: $color-brand-dark;
+      @media (hover: hover) {
+        &:hover {
+          background-color: $color-brand-dark;
+        }
       }
 
       .fa-calendar {
